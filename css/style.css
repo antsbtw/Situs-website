@@ -506,14 +506,14 @@ footer > .container > p {
 }
 
 
-/* 公司照片样式 */
 .company-photo {
-    max-width: 400px;        /* 最大宽度400px */
-    width: 100%;             /* 响应式宽度 */
-    height: auto;            /* 保持宽高比 */
-    border-radius: 8px;      /* 圆角 */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);  /* 阴影效果 */
-    object-fit: cover;       /* 图片裁剪方式 */
+    max-width: 400px !important;
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    object-fit: cover;
 }
 
 /* ===== 响应式设计 ===== */
@@ -535,7 +535,7 @@ footer > .container > p {
         max-width: 100%;     /* 移动端全宽 */
         margin: 0 auto;      /* 居中显示 */
     }
-    
+
   /* 移动端导航 */
     .nav-links {
         display: none;

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>网站加载中...</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- 动态加载的header组件 -->
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h2 data-text="manual-page-title">使用手册</h2>
+                
+                <div class="manual-section">
+                    <h3 data-text="manual-quick-start">快速入门</h3>
+                    <div class="step">
+                        <h4 data-text="manual-step-1-title">步骤1：注册账户</h4>
+                        <p data-text="manual-step-1-desc">访问我们的官方网站，点击"注册"按钮，填写必要信息完成账户注册。</p>
+                    </div>
+                    <div class="step">
+                        <h4 data-text="manual-step-2-title">步骤2：登录系统</h4>
+                        <p data-text="manual-step-2-desc">使用注册的账户信息登录系统，首次登录建议修改默认密码。</p>
+                    </div>
+                    <div class="step">
+                        <h4 data-text="manual-step-3-title">步骤3：基本配置</h4>
+                        <p data-text="manual-step-3-desc">根据向导完成基本配置，包括个人信息、偏好设置等。</p>
+                    </div>
+                </div>
+
+                <div class="manual-section">
+                    <h3 data-text="manual-features-title">功能说明</h3>
+                    <h4 data-text="manual-main-features">主要功能</h4>
+                    <ul>
+                        <li data-text="manual-feature-a"><strong>功能A：</strong>详细描述功能A的作用和使用方法</li>
+                        <li data-text="manual-feature-b"><strong>功能B：</strong>详细描述功能B的作用和使用方法</li>
+                        <li data-text="manual-feature-c"><strong>功能C：</strong>详细描述功能C的作用和使用方法</li>
+                    </ul>
+                </div>
+
+                <div class="manual-section">
+                    <h3 data-text="manual-faq-title">常见问题</h3>
+                    <h4 data-text="manual-faq-1-q">Q: 如何重置密码？</h4>
+                    <p data-text="manual-faq-1-a">A: 在登录页面点击"忘记密码"，按照提示操作即可重置密码。</p>
+                    
+                    <h4 data-text="manual-faq-2-q">Q: 如何联系技术支持？</h4>
+                    <p data-text="manual-faq-2-a">A: 可以通过以下方式联系我们：邮箱、电话或在线客服。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 动态加载的footer组件 -->
+    <div id="footer-placeholder"></div>
+
+    <script src="config/company.js"></script>
+    <script src="config/languages/zh-CN.js"></script>
+    <script src="config/languages/en-US.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

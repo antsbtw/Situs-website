@@ -3,264 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- ✅ 改为空内容，让JavaScript动态填充 -->
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <!-- ✅ 改为加载提示，JavaScript会立即更新 -->
     <title>网站加载中...</title>
     
-    <!-- 引入CSS样式文件 -->
     <link rel="stylesheet" href="css/style.css">
-    
-    <!-- 网站图标 -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <!-- 顶部导航 -->
-    <header>
-        <nav class="container">
-            <!-- 修改为这样 -->
-            <div class="logo">
-                <img src="images/situs-logo.jpeg" alt="Situs Technologies LLC" class="logo-image">
-                <span class="company-name" data-text="company-name">Situs Technologies LLC</span>
-            </div>
-            <ul class="nav-links">
-                <!-- ✅ 每个导航项都添加data-text属性 -->
-                <li><a href="#" onclick="showPage('home')" data-text="nav-home">首页</a></li>
-                <li><a href="#" onclick="showPage('about')" data-text="nav-about">关于我们</a></li>
-                <li><a href="#" onclick="showPage('products')" data-text="nav-products">产品介绍</a></li>
-                <li><a href="#" onclick="showPage('manual')" data-text="nav-manual">使用手册</a></li>
-                <li><a href="#" onclick="showPage('contact')" data-text="nav-contact">联系我们</a></li>
-                
-                <!-- ✅ 新增：语言切换下拉菜单 -->
-                <li class="language-selector">
-                    <select onchange="switchLanguage(this.value)" aria-label="选择语言">
-                        <option value="zh-CN">🇨🇳 中文</option>
-                        <option value="en-US" >🇺🇸 English</option>
-                    </select>
-                </li>
-            </ul>
-            
-            <!-- ✅ 移动端菜单按钮也支持多语言 -->
-            <button class="mobile-menu" data-aria-label="mobile-menu-label">☰</button>
-        </nav>
-    </header>
+    <!-- 动态加载的header组件 -->
+    <div id="header-placeholder"></div>
 
     <main>
         <!-- 首页内容 -->
-        <div id="home" class="page-content active">
-            <!-- 英雄区域 -->
-            <section class="hero">
-                <div class="container">
-                    <!-- ✅ 主标题使用多语言 -->
-                    <h1 data-text="welcome-title">欢迎来到我们的公司</h1>
-                    <!-- ✅ 副标题使用多语言 -->
-                    <p data-text="company-slogan">专业、创新、值得信赖的技术解决方案提供商</p>
-                    <!-- ✅ 按钮文本使用多语言 -->
-                    <a href="#" class="btn" onclick="showPage('products')" data-text="learn-more-btn">了解产品</a>
-                </div>
-            </section>
+        <section class="hero">
+            <div class="container">
+                <h1 data-text="welcome-title">欢迎来到我们的公司</h1>
+                <p data-text="company-slogan">专业、创新、值得信赖的技术解决方案提供商</p>
+                <a href="products.html" class="btn" data-text="learn-more-btn">了解产品</a>
+            </div>
+        </section>
 
-            <!-- 公司优势 -->
-            <section class="section">
-                <div class="container">
-                    <!-- ✅ 区块标题使用多语言 -->
-                    <h2 data-text="our-advantages">我们的优势</h2>
-                    <div class="features">
-                        <!-- ✅ 优势1：高效创新 -->
-                        <div class="feature-card">
-                            <div class="feature-icon">🚀</div>
-                            <h3 data-text="advantage-innovation-title">高效创新</h3>
-                            <p data-text="advantage-innovation-desc">采用最新技术栈，为客户提供高效的解决方案</p>
-                        </div>
-                        <!-- ✅ 优势2：安全可靠 -->
-                        <div class="feature-card">
-                            <div class="feature-icon">🛡️</div>
-                            <h3 data-text="advantage-security-title">安全可靠</h3>
-                            <p data-text="advantage-security-desc">严格的安全标准，确保数据和系统的安全性</p>
-                        </div>
-                        <!-- ✅ 优势3：定制服务 -->
-                        <div class="feature-card">
-                            <div class="feature-icon">🔒</div>
-                            <h3 data-text="advantage-customization-title">定制服务</h3>
-                            <p data-text="advantage-customization-desc">根据客户需求提供个性化的定制解决方案</p>
-                        </div>
+        <!-- 公司优势 -->
+        <section class="section">
+            <div class="container">
+                <h2 data-text="our-advantages">我们的优势</h2>
+                <div class="features">
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3 data-text="advantage-innovation-title">高效创新</h3>
+                        <p data-text="advantage-innovation-desc">采用最新技术栈，为客户提供高效的解决方案</p>
                     </div>
-                </div>
-            </section>
-        </div>
-
-        <!-- 关于我们页面 -->
-        <div id="about" class="page-content">
-            <section class="section about">
-                <div class="container">
-                    <a href="#" class="back-btn" onclick="showPage('home')" data-text="back-to-home">← 返回首页</a>
-                    <h2 data-text="about-page-title">关于我们</h2>
-                    <div class="about-content">
-                        <div class="about-text">
-                            <h3 data-text="about-company-intro-title">公司简介</h3>
-                            <p data-text="about-company-intro">我们是一家专注于技术创新的公司，成立于20XX年。公司致力于为客户提供优质的技术解决方案，涵盖软件开发、系统集成、技术咨询等多个领域。</p>
-                            
-                            <h3 data-text="about-vision-title">企业愿景</h3>
-                            <p data-text="about-vision">成为行业领先的技术解决方案提供商，通过创新技术推动行业发展，为客户创造更大价值。</p>
-                            
-                            <h3 data-text="about-values-title">核心价值观</h3>
-                            <ul>
-                                <li data-text="about-value-1">诚信为本，客户至上</li>
-                                <li data-text="about-value-2">持续创新，追求卓越</li>
-                                <li data-text="about-value-3">团队协作，共同成长</li>
-                                <li data-text="about-value-4">社会责任，可持续发展</li>
-                            </ul>
-                        </div>
-                        <div class="about-image">
-                            <div class="placeholder-img" data-text="about-company-photo">公司照片</div>
-                        </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3 data-text="advantage-security-title">安全可靠</h3>
+                        <p data-text="advantage-security-desc">严格的安全标准，确保数据和系统的安全性</p>
                     </div>
-                </div>
-            </section>
-        </div>
-
-        <div id="products" class="page-content">
-            <section class="section">
-                <div class="container">
-                    <a href="#" class="back-btn" onclick="showPage('home')" data-text="back-to-home">← 返回首页</a>
-                    <h2 data-text="products-page-title">我们的产品</h2>
-                    
-                    <!-- 改为单个OBox产品展示 -->
-                    <div class="products">
-                        <div class="product-card featured-product">
-                            <div class="product-image">
-                                <img src="images/obox-logo.png" alt="OBox MyCloud" />
-                            </div>
-                            <div class="product-content">
-                                <h3 class="product-title" data-text="obox-name">OBox MyCloud</h3>
-                                <p data-text="obox-tagline">您的私人VPN，几分钟内完成设置！</p>
-                                <p data-text="obox-description">担心公共VPN的隐私风险？被自建VPN的复杂性吓倒？OBox MyCloud专为无技术背景的个人和小团队设计。</p>
-                                
-                                <!-- 链接到详细页面 -->
-                                <a href="obox-mycloud.html" class="btn btn-primary" data-text="obox-learn-more">了解详情</a>
-                                <a href="#download" class="btn btn-secondary" data-text="obox-download-now">立即下载</a>
-                            </div>
-                        </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3 data-text="advantage-customization-title">定制服务</h3>
+                        <p data-text="advantage-customization-desc">根据客户需求提供个性化的定制解决方案</p>
                     </div>
-                </div>
-            </section>
-        </div>
-
-        <!-- 使用手册页面 -->
-        <div id="manual" class="page-content">
-            <section class="section">
-                <div class="container">
-                    <a href="#" class="back-btn" onclick="showPage('home')" data-text="back-to-home">← 返回首页</a>
-                    <h2 data-text="manual-page-title">使用手册</h2>
-                    
-                    <div class="manual-section">
-                        <h3 data-text="manual-quick-start">快速入门</h3>
-                        <div class="step">
-                            <h4 data-text="manual-step-1-title">步骤1：注册账户</h4>
-                            <p data-text="manual-step-1-desc">访问我们的官方网站，点击"注册"按钮，填写必要信息完成账户注册。</p>
-                        </div>
-                        <div class="step">
-                            <h4 data-text="manual-step-2-title">步骤2：登录系统</h4>
-                            <p data-text="manual-step-2-desc">使用注册的账户信息登录系统，首次登录建议修改默认密码。</p>
-                        </div>
-                        <div class="step">
-                            <h4 data-text="manual-step-3-title">步骤3：基本配置</h4>
-                            <p data-text="manual-step-3-desc">根据向导完成基本配置，包括个人信息、偏好设置等。</p>
-                        </div>
-                    </div>
-
-                    <div class="manual-section">
-                        <h3 data-text="manual-features-title">功能说明</h3>
-                        <h4 data-text="manual-main-features">主要功能</h4>
-                        <ul>
-                            <li data-text="manual-feature-a"><strong>功能A：</strong>详细描述功能A的作用和使用方法</li>
-                            <li data-text="manual-feature-b"><strong>功能B：</strong>详细描述功能B的作用和使用方法</li>
-                            <li data-text="manual-feature-c"><strong>功能C：</strong>详细描述功能C的作用和使用方法</li>
-                        </ul>
-                    </div>
-
-                    <div class="manual-section">
-                        <h3 data-text="manual-faq-title">常见问题</h3>
-                        <h4 data-text="manual-faq-1-q">Q: 如何重置密码？</h4>
-                        <p data-text="manual-faq-1-a">A: 在登录页面点击"忘记密码"，按照提示操作即可重置密码。</p>
-                        
-                        <h4 data-text="manual-faq-2-q">Q: 如何联系技术支持？</h4>
-                        <p data-text="manual-faq-2-a">A: 可以通过以下方式联系我们：邮箱、电话或在线客服。</p>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <!-- 联系我们页面 -->
-        <div id="contact" class="page-content">
-            <section class="section">
-                <div class="container">
-                    <a href="#" class="back-btn" onclick="showPage('home')" data-text="back-to-home">← 返回首页</a>
-                    <h2 data-text="contact-page-title">联系我们</h2>
-                    
-                    <div class="contact-form">
-                        <form id="contactForm">
-                            <div class="form-group">
-                                <label for="name" data-text="contact-form-name">姓名</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email" data-text="contact-form-email">邮箱</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="subject" data-text="contact-form-subject">主题</label>
-                                <input type="text" id="subject" name="subject" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="message" data-text="contact-form-message">留言</label>
-                                <textarea id="message" name="message" required></textarea>
-                            </div>
-                            <button type="submit" class="btn" data-text="contact-form-submit">发送留言</button>
-                        </form>
-                    </div>
-
-                    <div class="contact-info">
-                        <h3 data-text="contact-other-methods">其他联系方式</h3>
-                        <p><strong data-text="contact-email-label">邮箱：</strong> <span data-text="company-email">contact@yourcompany.com</span></p>
-                        <p><strong data-text="contact-phone-label">电话：</strong> <span data-text="company-phone">+86 xxx-xxxx-xxxx</span></p>
-                        <p><strong data-text="contact-address-label">地址：</strong> <span data-text="company-address">您的公司地址</span></p>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <!-- 页面底部 -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3 data-text="footer-quick-links">快速链接</h3>
-                    <p><a href="#" onclick="showPage('about')" data-text="nav-about">关于我们</a></p>
-                    <p><a href="#" onclick="showPage('products')" data-text="nav-products">产品介绍</a></p>
-                    <p><a href="#" onclick="showPage('manual')" data-text="nav-manual">使用手册</a></p>
-                </div>
-                <div class="footer-section">
-                    <h3 data-text="footer-contact-info">联系信息</h3>
-                    <p><strong data-text="contact-email-label">邮箱:</strong> <span data-text="company-email">service@situstechnologies.com</span></p>
-                    <p><strong data-text="contact-phone-label">电话:</strong> <span data-text="company-phone">+1-xxx-xxx-xxxx</span></p>
-                </div>
-                <div class="footer-section">
-                    <h3 data-text="footer-follow-us">关注我们</h3>
-                    <p data-text="footer-social-media">Facebook | Twitter | LinkedIn</p>
                 </div>
             </div>
-            <p data-text="copyright">© 2025 您的公司名称. 保留所有权利.</p>
-        </div>
-    </footer>
+        </section>
+    </main>
 
-    <!-- 🆕 按顺序加载配置文件 -->
+    <!-- 动态加载的footer组件 -->
+    <div id="footer-placeholder"></div>
+
     <script src="config/company.js"></script>
     <script src="config/languages/zh-CN.js"></script>
     <script src="config/languages/en-US.js"></script>
-    <!-- 最后加载主逻辑 -->
+    <script src="js/components.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

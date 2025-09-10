@@ -16,35 +16,8 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <!-- 顶部导航 -->
-    <header>
-        <nav class="container">
-            <!-- 修改为这样 -->
-            <div class="logo">
-                <img src="images/situs-logo.jpeg" alt="Situs Technologies LLC" class="logo-image">
-                <span class="company-name" data-text="company-name">Situs Technologies LLC</span>
-            </div>
-            <ul class="nav-links">
-                <!-- ✅ 每个导航项都添加data-text属性 -->
-                <li><a href="#" onclick="showPage('home')" data-text="nav-home">首页</a></li>
-                <li><a href="#" onclick="showPage('about')" data-text="nav-about">关于我们</a></li>
-                <li><a href="#" onclick="showPage('products')" data-text="nav-products">产品介绍</a></li>
-                <li><a href="#" onclick="showPage('manual')" data-text="nav-manual">使用手册</a></li>
-                <li><a href="#" onclick="showPage('contact')" data-text="nav-contact">联系我们</a></li>
-                
-                <!-- ✅ 新增：语言切换下拉菜单 -->
-                <li class="language-selector">
-                    <select onchange="switchLanguage(this.value)" aria-label="选择语言">
-                        <option value="zh-CN">🇨🇳 中文</option>
-                        <option value="en-US" >🇺🇸 English</option>
-                    </select>
-                </li>
-            </ul>
-            
-            <!-- ✅ 移动端菜单按钮也支持多语言 -->
-            <button class="mobile-menu" data-aria-label="mobile-menu-label">☰</button>
-        </nav>
-    </header>
+    <!-- 🆕 动态加载的header组件 -->
+    <div id="header-placeholder"></div>
 
     <main>
         <!-- 产品介绍Hero区域 -->
@@ -65,7 +38,7 @@
         <!-- 返回按钮 -->
         <section class="section">
             <div class="container">
-                <a href="index.html#products" class="back-btn" onclick="showPage('products')" data-text="back-to-products">← 返回产品页面</a>
+                <a href="index.html#products" class="back-btn" data-text="back-to-products">← 返回产品页面</a>
             </div>
         </section>
 
@@ -226,34 +199,15 @@
         </section>
     </main>
 
-    <!-- 页面底部 -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3 data-text="footer-quick-links">快速链接</h3>
-                    <p><a href="index.html#about" data-text="nav-about">关于我们</a></p>
-                    <p><a href="index.html#products" data-text="nav-products">产品介绍</a></p>
-                    <p><a href="index.html#manual" data-text="nav-manual">使用手册</a></p>
-                </div>
-                <div class="footer-section">
-                    <h3 data-text="footer-contact-info">联系信息</h3>
-                    <p><strong data-text="contact-email-label">邮箱:</strong> <span data-text="company-email">service@situstechnologies.com</span></p>
-                    <p><strong data-text="contact-phone-label">电话:</strong> <span data-text="company-phone">+1-xxx-xxx-xxxx</span></p>
-                </div>
-                <div class="footer-section">
-                    <h3 data-text="footer-follow-us">关注我们</h3>
-                    <p data-text="footer-social-media">Facebook | Twitter | LinkedIn</p>
-                </div>
-            </div>
-            <p data-text="copyright">© 2025 您的公司名称. 保留所有权利.</p>
-        </div>
-    </footer>
+    <!-- 🆕 动态加载的footer组件 -->
+    <div id="footer-placeholder"></div>
 
     <!-- 按顺序加载配置文件 -->
     <script src="config/company.js"></script>
     <script src="config/languages/zh-CN.js"></script>
     <script src="config/languages/en-US.js"></script>
+    <!-- 🆕 加载组件加载器 -->
+    <script src="js/components.js"></script>
     <!-- 最后加载主逻辑 -->
     <script src="js/script.js"></script>
 </body>

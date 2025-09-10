@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>网站加载中...</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- 动态加载的header组件 -->
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="section about">
+            <div class="container">
+                <h2 data-text="about-page-title">关于我们</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3 data-text="about-company-intro-title">公司简介</h3>
+                        <p data-text="about-company-intro">我们是一家专注于技术创新的公司，成立于20XX年。公司致力于为客户提供优质的技术解决方案，涵盖软件开发、系统集成、技术咨询等多个领域。</p>
+                        
+                        <h3 data-text="about-vision-title">企业愿景</h3>
+                        <p data-text="about-vision">成为行业领先的技术解决方案提供商，通过创新技术推动行业发展，为客户创造更大价值。</p>
+                        
+                        <h3 data-text="about-values-title">核心价值观</h3>
+                        <ul>
+                            <li data-text="about-value-1">诚信为本，客户至上</li>
+                            <li data-text="about-value-2">持续创新，追求卓越</li>
+                            <li data-text="about-value-3">团队协作，共同成长</li>
+                            <li data-text="about-value-4">社会责任，可持续发展</li>
+                        </ul>
+                    </div>
+                    <div class="about-image">
+                        <div class="placeholder-img" data-text="about-company-photo">公司照片</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 动态加载的footer组件 -->
+    <div id="footer-placeholder"></div>
+
+    <script src="config/company.js"></script>
+    <script src="config/languages/zh-CN.js"></script>
+    <script src="config/languages/en-US.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

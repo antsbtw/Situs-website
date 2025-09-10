@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>网站加载中...</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- 动态加载的header组件 -->
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h2 data-text="products-page-title">我们的产品</h2>
+                
+                <div class="products">
+                    <div class="product-card featured-product">
+                        <div class="product-image">
+                            <img src="images/obox-logo.png" alt="OBox MyCloud" />
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title" data-text="obox-name">OBox MyCloud</h3>
+                            <p data-text="obox-tagline">您的私人VPN，几分钟内完成设置！</p>
+                            <p data-text="obox-description">担心公共VPN的隐私风险？被自建VPN的复杂性吓倒？OBox MyCloud专为无技术背景的个人和小团队设计。</p>
+                            
+                            <a href="obox-mycloud.html" class="btn btn-primary" data-text="obox-learn-more">了解详情</a>
+                            <a href="obox-mycloud.html#download" class="btn btn-secondary" data-text="obox-download-now">立即下载</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 动态加载的footer组件 -->
+    <div id="footer-placeholder"></div>
+
+    <script src="config/company.js"></script>
+    <script src="config/languages/zh-CN.js"></script>
+    <script src="config/languages/en-US.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

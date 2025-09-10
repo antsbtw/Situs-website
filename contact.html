@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>网站加载中...</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- 动态加载的header组件 -->
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h2 data-text="contact-page-title">联系我们</h2>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" data-text="contact-form-name">姓名</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-text="contact-form-email">邮箱</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" data-text="contact-form-subject">主题</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-text="contact-form-message">留言</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn" data-text="contact-form-submit">发送留言</button>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <h3 data-text="contact-other-methods">其他联系方式</h3>
+                    <p><strong data-text="contact-email-label">邮箱：</strong> <span data-text="company-email">contact@yourcompany.com</span></p>
+                    <p><strong data-text="contact-phone-label">电话：</strong> <span data-text="company-phone">+86 xxx-xxxx-xxxx</span></p>
+                    <p><strong data-text="contact-address-label">地址：</strong> <span data-text="company-address">您的公司地址</span></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 动态加载的footer组件 -->
+    <div id="footer-placeholder"></div>
+
+    <script src="config/company.js"></script>
+    <script src="config/languages/zh-CN.js"></script>
+    <script src="config/languages/en-US.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -54,20 +54,19 @@ window.LANGUAGE_TEXTS['zh-CN'] = {
     // ℹ️ 关于我们页面
     aboutPage: {
         title: "关于我们",
-        companyIntroTitle: "公司简介",
-        companyIntro: "我们是一家专注于技术创新的公司，成立于2020年。公司致力于为客户提供优质的技术解决方案，涵盖软件开发、系统集成、技术咨询等多个领域。",
-        
-        visionTitle: "企业愿景",
-        vision: "成为行业领先的技术解决方案提供商，通过创新技术推动行业发展，为客户创造更大价值。",
-        
-        valuesTitle: "核心价值观",
-        values: [
-            "诚信为本，客户至上",
-            "持续创新，追求卓越", 
-            "团队协作，共同成长",
-            "社会责任，可持续发展"
-        ],
-        
+    companyIntroTitle: "公司简介",
+    companyIntro: `我们是一家专注于 <strong>Connecting People</strong> 移动应用的创新型公司，成立于2025年。
+        我们以尊重个人隐私和数据资产为核心原则，致力于为用户打造 <strong>简单易用、安全可靠、充满乐趣</strong> 的连接产品。`,
+    visionTitle: "企业愿景",
+    vision: `<strong>服务创造价值 · 连接点亮未来 · 安全守护信任</strong>`,
+    
+    valuesTitle: "核心价值观",
+    values: [
+        "诚信为本，客户至上",
+        "持续创新，追求卓越", 
+        "团队协作，共同成长",
+        "社会责任，可持续发展"
+    ],
         companyPhoto: "公司照片",
         
         teamTitle: "我们的团队",

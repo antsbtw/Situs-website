@@ -55,10 +55,10 @@ window.LANGUAGE_TEXTS['en-US'] = {
     aboutPage: {
         title: "About Us",
         companyIntroTitle: "Company Overview",
-        companyIntro: "We are a company focused on technological innovation, established in 2020. We are dedicated to providing high-quality technology solutions for clients, covering software development, system integration, technical consulting and more.",
-        
+        companyIntro: `We are an innovative company focused on <strong>Connecting People</strong> mobile applications, founded in 2025.
+        We take respecting personal privacy and data assets as our core principle, committed to creating <strong>simple, secure, and delightful</strong> connection products for users.`,
         visionTitle: "Our Vision",
-        vision: "To become a leading technology solutions provider, driving industry development through innovative technology and creating greater value for clients.",
+        vision: `<strong>Service Creates Value · Connection lights up the future · Security safeguards trust</strong>`,
         
         valuesTitle: "Core Values", 
         values: [

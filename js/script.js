@@ -260,7 +260,6 @@ const TEXT_MAPPINGS = {
     "copyright": () => `© ${getCompanyInfo('foundedYear')} ${getCompanyInfo('brand.name')}. ${t('common.copyright')}.`
 };
 
-// ===== 🔄 页面内容更新函数 =====
 /**
  * 更新页面中所有使用变量的内容
  */
@@ -274,7 +273,15 @@ function updatePageContent() {
         elements.forEach(element => {
             try {
                 const textValue = TEXT_MAPPINGS[key]();
-                element.textContent = textValue;
+                
+                // 🔧 修改：检查内容是否包含HTML标签
+                if (textValue && textValue.includes('<') && textValue.includes('>')) {
+                    // 包含HTML标签，使用innerHTML
+                    element.innerHTML = textValue;
+                } else {
+                    // 纯文本，使用textContent（更安全）
+                    element.textContent = textValue;
+                }
             } catch (error) {
                 console.warn(`更新文本失败: ${key}`, error);
                 element.textContent = key;

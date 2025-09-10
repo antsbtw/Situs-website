@@ -37,16 +37,16 @@ window.LANGUAGE_TEXTS['en-US'] = {
         // Company Advantages
         advantages: {
             innovation: {
-                title: "Efficient Innovation",
-                description: "Using cutting-edge technology stack to provide efficient solutions for clients"
+                title: "Simple & Intuitive",
+                description: "Intuitive interface design that allows every user to get started easily"
             },
             security: {
-                title: "Secure & Reliable",
-                description: "Strict security standards to ensure data and system security"
+                title: "Continuous Innovation", 
+                description: "Features are continuously iterated and optimized to bring users a better experience"
             },
             customization: {
-                title: "Custom Services",
-                description: "Providing personalized solutions based on client requirements"
+                title: "Privacy First",
+                description: "Strict data protection policies, your privacy security is our commitment"
             }
         }
     },
@@ -251,8 +251,8 @@ window.LANGUAGE_TEXTS['en-US'] = {
         socialMedia: "WeChat | Weibo | LinkedIn",
         
         // Contact Information
-        email: "Email: contact@yourcompany.com",
-        phone: "Phone: +86 xxx-xxxx-xxxx",
+        email: "Email: service@situstechnologies.com",
+        phone: "Phone: +1 xxx-xxxx-xxxx",
         
         // Legal Information
         legal: {
@@ -261,7 +261,7 @@ window.LANGUAGE_TEXTS['en-US'] = {
             disclaimer: "Disclaimer"
         },
         
-        copyright: "© 2025 Your Company Name. All Rights Reserved."
+        copyright: "© 2025 Situs Technologies LLC. All Rights Reserved."
     }
 };
 

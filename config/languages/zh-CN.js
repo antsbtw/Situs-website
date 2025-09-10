@@ -251,8 +251,8 @@ window.LANGUAGE_TEXTS['zh-CN'] = {
         socialMedia: "微信 | 微博 | LinkedIn",
         
         // 联系信息
-        email: "邮箱: contact@yourcompany.com",
-        phone: "电话: +86 xxx-xxxx-xxxx",
+        email: "邮箱: service@situstechnologies.com",
+        phone: "电话: +1 xxx-xxxx-xxxx",
         
         // 法律信息
         legal: {
@@ -261,7 +261,7 @@ window.LANGUAGE_TEXTS['zh-CN'] = {
             disclaimer: "免责声明"
         },
         
-        copyright: "© 2025 您的公司名称. 保留所有权利."
+        copyright: "© 2025 Situs Technologies LLC. 保留所有权利."
     }
 };
 

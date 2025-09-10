@@ -32,21 +32,21 @@ window.LANGUAGE_TEXTS['zh-CN'] = {
         welcomeTitle: "欢迎来到 Situs",
         slogan: "大道至简",
         learnMoreBtn: "了解产品",
-        ourAdvantages: "我们的优势",
+        ourAdvantages: "我们的价值",
         
         // 优势介绍
         advantages: {
             innovation: {
-                title: "高效创新",
-                description: "采用最新技术栈，为客户提供高效的解决方案"
+                title: "简单易用",
+                description: "直观的界面设计，让每个用户都能轻松上手"
             },
             security: {
-                title: "安全可靠", 
-                description: "严格的安全标准，确保数据和系统的安全性"
+                title: "持续创新", 
+                description: "功能不断迭代优化，为用户带来更好体验"
             },
             customization: {
-                title: "定制服务",
-                description: "根据客户需求提供个性化的定制解决方案"
+                title: "隐私至上",
+                description: "严格的数据保护政策，您的隐私安全是我们的承诺"
             }
         }
     },

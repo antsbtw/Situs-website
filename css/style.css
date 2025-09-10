@@ -505,12 +505,11 @@ footer > .container > p {
     color: white;
 }
 
-
 .company-photo {
     max-width: 400px !important;
     width: 100% !important;
     height: auto !important;
-    display: block;
+    display: block !important;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     object-fit: cover;

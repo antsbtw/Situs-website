@@ -19,9 +19,11 @@
     <!-- 顶部导航 -->
     <header>
         <nav class="container">
-            <!-- ✅ Logo使用公司名称变量 -->
-            <div class="logo" data-text="company-name">您的公司名称</div>
-            
+            <!-- 修改为这样 -->
+            <div class="logo">
+                <img src="images/situs-logo.jpeg" alt="Situs Technologies LLC" class="logo-image">
+                <span class="company-name" data-text="company-name">Situs Technologies LLC</span>
+            </div>
             <ul class="nav-links">
                 <!-- ✅ 每个导航项都添加data-text属性 -->
                 <li><a href="#" onclick="showPage('home')" data-text="nav-home">首页</a></li>

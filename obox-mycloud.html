@@ -19,24 +19,29 @@
     <!-- 顶部导航 -->
     <header>
         <nav class="container">
-            <div class="logo" data-text="company-name">Situs</div>
-            
+            <!-- 修改为这样 -->
+            <div class="logo">
+                <img src="images/situs-logo.jpeg" alt="Situs Technologies LLC" class="logo-image">
+                <span class="company-name" data-text="company-name">Situs Technologies LLC</span>
+            </div>
             <ul class="nav-links">
-                <li><a href="index.html" data-text="nav-home">首页</a></li>
-                <li><a href="index.html#about" onclick="showPage('about')" data-text="nav-about">关于我们</a></li>
-                <li><a href="index.html#products" onclick="showPage('products')" data-text="nav-products">产品介绍</a></li>
-                <li><a href="index.html#manual" onclick="showPage('manual')" data-text="nav-manual">使用手册</a></li>
-                <li><a href="index.html#contact" onclick="showPage('contact')" data-text="nav-contact">联系我们</a></li>
+                <!-- ✅ 每个导航项都添加data-text属性 -->
+                <li><a href="#" onclick="showPage('home')" data-text="nav-home">首页</a></li>
+                <li><a href="#" onclick="showPage('about')" data-text="nav-about">关于我们</a></li>
+                <li><a href="#" onclick="showPage('products')" data-text="nav-products">产品介绍</a></li>
+                <li><a href="#" onclick="showPage('manual')" data-text="nav-manual">使用手册</a></li>
+                <li><a href="#" onclick="showPage('contact')" data-text="nav-contact">联系我们</a></li>
                 
-                <!-- 语言切换下拉菜单 -->
+                <!-- ✅ 新增：语言切换下拉菜单 -->
                 <li class="language-selector">
                     <select onchange="switchLanguage(this.value)" aria-label="选择语言">
                         <option value="zh-CN">🇨🇳 中文</option>
-                        <option value="en-US">🇺🇸 English</option>
+                        <option value="en-US" >🇺🇸 English</option>
                     </select>
                 </li>
             </ul>
             
+            <!-- ✅ 移动端菜单按钮也支持多语言 -->
             <button class="mobile-menu" data-aria-label="mobile-menu-label">☰</button>
         </nav>
     </header>

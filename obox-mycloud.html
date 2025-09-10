@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>网站加载中...</title>
+    
+    <!-- 引入现有样式文件 -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 引入产品页面专用样式 -->
+    <link rel="stylesheet" href="css/product.css">
+    
+    <!-- 网站图标 -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <header>
+        <nav class="container">
+            <div class="logo" data-text="company-name">Situs</div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html" data-text="nav-home">首页</a></li>
+                <li><a href="index.html#about" onclick="showPage('about')" data-text="nav-about">关于我们</a></li>
+                <li><a href="index.html#products" onclick="showPage('products')" data-text="nav-products">产品介绍</a></li>
+                <li><a href="index.html#manual" onclick="showPage('manual')" data-text="nav-manual">使用手册</a></li>
+                <li><a href="index.html#contact" onclick="showPage('contact')" data-text="nav-contact">联系我们</a></li>
+                
+                <!-- 语言切换下拉菜单 -->
+                <li class="language-selector">
+                    <select onchange="switchLanguage(this.value)" aria-label="选择语言">
+                        <option value="zh-CN">🇨🇳 中文</option>
+                        <option value="en-US">🇺🇸 English</option>
+                    </select>
+                </li>
+            </ul>
+            
+            <button class="mobile-menu" data-aria-label="mobile-menu-label">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 产品介绍Hero区域 -->
+        <section class="product-hero">
+            <div class="container">
+                <h1 data-text="obox-name">OBox MyCloud</h1>
+                <p class="tagline" data-text="obox-tagline">您的私人VPN，几分钟内完成设置！</p>
+                <p class="description" data-text="obox-description">
+                    担心公共VPN的隐私风险？被自建VPN的复杂性吓倒？OBox MyCloud专为无技术背景的个人和小团队设计。选择云服务商，一键设置私人VPN，享受安全、无限制的网络体验。
+                </p>
+                <div class="product-cta-buttons">
+                    <a href="#download" class="product-btn product-btn-primary" data-text="obox-download-now">立即下载</a>
+                    <a href="#video" class="product-btn product-btn-secondary" data-text="obox-watch-demo">观看演示</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 返回按钮 -->
+        <section class="section">
+            <div class="container">
+                <a href="index.html#products" class="back-btn" onclick="showPage('products')" data-text="back-to-products">← 返回产品页面</a>
+            </div>
+        </section>
+
+        <!-- 产品特点 -->
+        <section class="product-features">
+            <div class="container">
+                <h2 class="section-title" data-text="obox-why-choose">为什么选择 OBox MyCloud？</h2>
+                <div class="product-features-grid">
+                    <div class="product-feature-card">
+                        <div class="product-feature-icon">🚀</div>
+                        <h3 data-text="obox-feature-setup-title">轻松设置</h3>
+                        <p data-text="obox-feature-setup-desc">无需编程——10分钟内创建您的VPN</p>
+                    </div>
+                    <div class="product-feature-card">
+                        <div class="product-feature-icon">🔒</div>
+                        <h3 data-text="obox-feature-privacy-title">完全隐私</h3>
+                        <p data-text="obox-feature-privacy-desc">您的数据保存在您的服务器上，远离第三方</p>
+                    </div>
+                    <div class="product-feature-card">
+                        <div class="product-feature-icon">🌍</div>
+                        <h3 data-text="obox-feature-global-title">全球访问</h3>
+                        <p data-text="obox-feature-global-desc">轻松在全球范围内流媒体、工作或浏览</p>
+                    </div>
+                    <div class="product-feature-card">
+                        <div class="product-feature-icon">⚡</div>
+                        <h3 data-text="obox-feature-management-title">简单管理</h3>
+                        <p data-text="obox-feature-management-desc">通过直观的控制面板控制VPN并添加用户</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 应用截图展示 -->
+        <section class="product-screenshots">
+            <div class="container">
+                <h2 class="section-title" data-text="obox-app-screenshots">应用截图</h2>
+                <div class="screenshots-grid">
+                    <div class="screenshot-item">
+                        <img src="images/obox-screenshot1.png" alt="云服务商选择" />
+                        <h4 data-text="obox-screenshot1-title">选择云服务商</h4>
+                        <p data-text="obox-screenshot1-desc">支持DigitalOcean、Google Cloud、AWS等主流云服务</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="images/obox-screenshot2.png" alt="身份认证" />
+                        <h4 data-text="obox-screenshot2-title">API身份认证</h4>
+                        <p data-text="obox-screenshot2-desc">安全的API访问，保护您的云账户</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="images/obox-screenshot3.png" alt="VPN配置分享" />
+                        <h4 data-text="obox-screenshot3-title">配置分享</h4>
+                        <p data-text="obox-screenshot3-desc">支持多种VPN客户端，一键分享给家人朋友</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 视频演示区域 -->
+        <section id="video" class="product-video">
+            <div class="container">
+                <h2 class="section-title" data-text="obox-video-demo-title">视频演示</h2>
+                <p data-text="obox-video-demo-desc">观看完整的设置教程，了解如何在10分钟内创建您的私人VPN</p>
+                <div class="video-container">
+                    <!-- YouTube视频嵌入 - 替换YOUR_VIDEO_ID为实际的YouTube视频ID -->
+                    <iframe 
+                        src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+                        title="OBox MyCloud 使用教程" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- 技术功能详情 -->
+        <section class="product-tech-features">
+            <div class="container">
+                <h2 class="section-title" data-text="obox-key-features">核心功能</h2>
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <h4 data-text="obox-tech-cloud-title">多云支持</h4>
+                        <ul class="tech-list">
+                            <li data-text="obox-tech-digitalocean">DigitalOcean Droplet</li>
+                            <li data-text="obox-tech-google">Google Cloud VPS</li>
+                            <li data-text="obox-tech-aws">AWS EC2 VPS</li>
+                            <li data-text="obox-tech-more">更多云服务商陆续支持</li>
+                        </ul>
+                    </div>
+                    <div class="tech-card">
+                        <h4 data-text="obox-tech-clients-title">客户端支持</h4>
+                        <ul class="tech-list">
+                            <li data-text="obox-tech-outline">Outline - 稳定可靠</li>
+                            <li data-text="obox-tech-myvpn">MyVPN - 配置加密</li>
+                            <li data-text="obox-tech-singbox">sing-box - 强力反审查</li>
+                            <li data-text="obox-tech-automatic">自动选择最佳配置</li>
+                        </ul>
+                    </div>
+                    <div class="tech-card">
+                        <h4 data-text="obox-tech-management-title">用户管理</h4>
+                        <ul class="tech-list">
+                            <li data-text="obox-tech-limits">设置数据流量限制</li>
+                            <li data-text="obox-tech-time">时间访问控制</li>
+                            <li data-text="obox-tech-share">私人链接分享</li>
+                            <li data-text="obox-tech-monitor">实时使用监控</li>
+                        </ul>
+                    </div>
+                    <div class="tech-card">
+                        <h4 data-text="obox-tech-security-title">安全特性</h4>
+                        <ul class="tech-list">
+                            <li data-text="obox-tech-encryption">端到端加密</li>
+                            <li data-text="obox-tech-control">完全数据控制</li>
+                            <li data-text="obox-tech-logs">无日志记录</li>
+                            <li data-text="obox-tech-privacy">隐私优先设计</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 适用人群 -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title" data-text="obox-target-audience">适用人群</h2>
+                <div class="features">
+                    <div class="feature-card">
+                        <div class="feature-icon">👤</div>
+                        <h3 data-text="obox-audience-individuals-title">个人用户</h3>
+                        <p data-text="obox-audience-individuals-desc">寻求安全私人VPN的个人用户</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">👥</div>
+                        <h3 data-text="obox-audience-teams-title">小团队</h3>
+                        <p data-text="obox-audience-teams-desc">需要快速访问全球内容的小团队</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">👨‍👩‍👧‍👦</div>
+                        <h3 data-text="obox-audience-families-title">家庭用户</h3>
+                        <p data-text="obox-audience-families-desc">想与家人或朋友分享私人网络的用户</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 下载区域 -->
+        <section id="download" class="product-download">
+            <div class="container">
+                <h2 class="section-title" data-text="obox-get-started">立即开始！</h2>
+                <p data-text="obox-download-desc">下载OBox MyCloud，轻松解锁您的私人VPN云！</p>
+                <div class="download-buttons">
+                    <a href="#" class="store-button" data-text="obox-app-store">App Store 下载</a>
+                    <a href="#" class="store-button" data-text="obox-google-play">Google Play 下载</a>
+                    <a href="#" class="store-button" data-text="obox-direct-download">直接下载 APK</a>
+                </div>
+                <p style="margin-top: 30px;" data-text="obox-contact-support">
+                    有疑问？联系我们：<a href="mailto:service@situstechnologies.com" style="color: #ffd700;">service@situstechnologies.com</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页面底部 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-text="footer-quick-links">快速链接</h3>
+                    <p><a href="index.html#about" data-text="nav-about">关于我们</a></p>
+                    <p><a href="index.html#products" data-text="nav-products">产品介绍</a></p>
+                    <p><a href="index.html#manual" data-text="nav-manual">使用手册</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3 data-text="footer-contact-info">联系信息</h3>
+                    <p><strong data-text="contact-email-label">邮箱:</strong> <span data-text="company-email">service@situstechnologies.com</span></p>
+                    <p><strong data-text="contact-phone-label">电话:</strong> <span data-text="company-phone">+1-xxx-xxx-xxxx</span></p>
+                </div>
+                <div class="footer-section">
+                    <h3 data-text="footer-follow-us">关注我们</h3>
+                    <p data-text="footer-social-media">Facebook | Twitter | LinkedIn</p>
+                </div>
+            </div>
+            <p data-text="copyright">© 2025 您的公司名称. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <!-- 按顺序加载配置文件 -->
+    <script src="config/company.js"></script>
+    <script src="config/languages/zh-CN.js"></script>
+    <script src="config/languages/en-US.js"></script>
+    <!-- 最后加载主逻辑 -->
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -247,13 +247,12 @@ window.LANGUAGE_TEXTS['en-US'] = {
     footer: {
         quickLinks: "Quick Links",
         contactInfo: "Contact Info",
-        followUs: "Follow Us",
-        socialMedia: "WeChat | Weibo | LinkedIn",
-        
+        followUs: "Follow Us", 
+        socialMedia: "Facebook | Twitter | LinkedIn",
         // Contact Information
         email: "Email: service@situstechnologies.com",
         phone: "Phone: +1 xxx-xxxx-xxxx",
-        
+
         // Legal Information
         legal: {
             privacy: "Privacy Policy",
@@ -262,7 +261,91 @@ window.LANGUAGE_TEXTS['en-US'] = {
         },
         
         copyright: "© 2025 Situs Technologies LLC. All Rights Reserved."
-    }
+
+    },
+
+    // OBox MyCloud 产品页面
+    oboxMyCloud: {
+        // 基本信息
+        name: "OBox MyCloud",
+        tagline: "Your Private VPN, Set Up in Minutes!",
+        description: "Worried about the privacy risks of public VPNs? Intimidated by the complexity of building your own? OBox MyCloud is designed for individuals and small teams with no tech background. Pick a cloud provider, set up your private VPN with one tap, and enjoy a secure, unrestricted internet experience.",
+        
+        // CTA按钮
+        downloadNow: "Download Now",
+        watchDemo: "Watch Demo",
+        
+        // 功能特点
+        whyChoose: "Why Choose OBox MyCloud?",
+        featureSetupTitle: "Effortless Setup",
+        featureSetupDesc: "No coding needed—create your VPN in just 10 minutes",
+        featurePrivacyTitle: "Total Privacy", 
+        featurePrivacyDesc: "Your data stays on your server, safe from third parties",
+        featureGlobalTitle: "Global Access",
+        featureGlobalDesc: "Stream, work, or browse worldwide with ease",
+        featureManagementTitle: "Simple Management",
+        featureManagementDesc: "Control your VPN and add users via an intuitive dashboard",
+        
+        // 截图说明
+        appScreenshots: "App Screenshots",
+        screenshot1Title: "Choose Cloud Provider",
+        screenshot1Desc: "Works with DigitalOcean, Google Cloud, AWS and other major cloud services",
+        screenshot2Title: "API Authentication", 
+        screenshot2Desc: "Secure API access to protect your cloud account",
+        screenshot3Title: "Configuration Sharing",
+        screenshot3Desc: "Support multiple VPN clients, share with family and friends instantly",
+        
+        // 视频演示
+        videoDemoTitle: "Video Demo",
+        videoDemoDesc: "Watch the complete setup tutorial and learn how to create your private VPN in 10 minutes",
+        
+        // 技术功能
+        keyFeatures: "Key Features",
+        techCloudTitle: "Multi-Cloud Support",
+        techDigitalocean: "DigitalOcean Droplet",
+        techGoogle: "Google Cloud VPS", 
+        techAws: "AWS EC2 VPS",
+        techMore: "More cloud providers coming soon",
+        
+        techClientsTitle: "Client Support",
+        techOutline: "Outline - Stable and reliable",
+        techMyvpn: "MyVPN - Configuration encryption",
+        techSingbox: "sing-box - Strong anti-censorship",
+        techAutomatic: "Automatically select optimal configuration",
+        
+        techManagementTitle: "User Management",
+        techLimits: "Set data traffic limits",
+        techTime: "Time access control",
+        techShare: "Private link sharing",
+        techMonitor: "Real-time usage monitoring",
+        
+        techSecurityTitle: "Security Features",
+        techEncryption: "End-to-end encryption",
+        techControl: "Full data control", 
+        techLogs: "No logging policy",
+        techPrivacy: "Privacy-first design",
+        
+        // 适用人群
+        targetAudience: "Who's It For?",
+        audienceIndividualsTitle: "Individual Users",
+        audienceIndividualsDesc: "Individuals seeking a secure, private VPN",
+        audienceTeamsTitle: "Small Teams",
+        audienceTeamsDesc: "Small teams needing fast access to global content",
+        audienceFamiliesTitle: "Family Users", 
+        audienceFamiliesDesc: "Users who want to share a private network with family or friends",
+        
+        // 下载区域
+        getStarted: "Get Started Now!",
+        downloadDesc: "Download OBox MyCloud and unlock your own private VPN cloud the easy way!",
+        appStore: "Download on App Store",
+        googlePlay: "Get it on Google Play", 
+        directDownload: "Direct APK Download",
+        contactSupport: "Questions? Reach out:"
+    },
+
+    // 通用导航
+    backToProducts: "← Back to Products"
+
 };
 
 console.log('🇺🇸 English language pack loaded');

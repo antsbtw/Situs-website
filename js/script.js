@@ -146,7 +146,91 @@ const TEXT_MAPPINGS = {
     "company-email": () => getCompanyInfo('contacts.email'),
     "company-phone": () => getCompanyInfo('contacts.phone'),
     "company-address": () => getCompanyInfo('contacts.address'),
-    
+
+    // ✅ 新增：页脚映射
+    "footer-quick-links": () => t('footer.quickLinks'),
+    "footer-contact-info": () => t('footer.contactInfo'),
+    "footer-follow-us": () => t('footer.followUs'),
+    "footer-social-media": () => t('footer.socialMedia'),
+    "contact-email-label": () => t('contactPage.emailLabel'),
+    "contact-phone-label": () => t('contactPage.phoneLabel'),
+
+    // OBox产品页面映射 - 添加到现有的TEXT_MAPPINGS中
+"obox-name": () => t('oboxMyCloud.name'),
+"obox-tagline": () => t('oboxMyCloud.tagline'),
+"obox-description": () => t('oboxMyCloud.description'),
+"obox-download-now": () => t('oboxMyCloud.downloadNow'),
+"obox-watch-demo": () => t('oboxMyCloud.watchDemo'),
+"obox-why-choose": () => t('oboxMyCloud.whyChoose'),
+
+// 功能特点
+"obox-feature-setup-title": () => t('oboxMyCloud.featureSetupTitle'),
+"obox-feature-setup-desc": () => t('oboxMyCloud.featureSetupDesc'),
+"obox-feature-privacy-title": () => t('oboxMyCloud.featurePrivacyTitle'),
+"obox-feature-privacy-desc": () => t('oboxMyCloud.featurePrivacyDesc'),
+"obox-feature-global-title": () => t('oboxMyCloud.featureGlobalTitle'),
+"obox-feature-global-desc": () => t('oboxMyCloud.featureGlobalDesc'),
+"obox-feature-management-title": () => t('oboxMyCloud.featureManagementTitle'),
+"obox-feature-management-desc": () => t('oboxMyCloud.featureManagementDesc'),
+
+// 截图说明
+"obox-app-screenshots": () => t('oboxMyCloud.appScreenshots'),
+"obox-screenshot1-title": () => t('oboxMyCloud.screenshot1Title'),
+"obox-screenshot1-desc": () => t('oboxMyCloud.screenshot1Desc'),
+"obox-screenshot2-title": () => t('oboxMyCloud.screenshot2Title'),
+"obox-screenshot2-desc": () => t('oboxMyCloud.screenshot2Desc'),
+"obox-screenshot3-title": () => t('oboxMyCloud.screenshot3Title'),
+"obox-screenshot3-desc": () => t('oboxMyCloud.screenshot3Desc'),
+
+// 视频演示
+"obox-video-demo-title": () => t('oboxMyCloud.videoDemoTitle'),
+"obox-video-demo-desc": () => t('oboxMyCloud.videoDemoDesc'),
+
+// 技术功能
+"obox-key-features": () => t('oboxMyCloud.keyFeatures'),
+"obox-tech-cloud-title": () => t('oboxMyCloud.techCloudTitle'),
+"obox-tech-digitalocean": () => t('oboxMyCloud.techDigitalocean'),
+"obox-tech-google": () => t('oboxMyCloud.techGoogle'),
+"obox-tech-aws": () => t('oboxMyCloud.techAws'),
+"obox-tech-more": () => t('oboxMyCloud.techMore'),
+
+"obox-tech-clients-title": () => t('oboxMyCloud.techClientsTitle'),
+"obox-tech-outline": () => t('oboxMyCloud.techOutline'),
+"obox-tech-myvpn": () => t('oboxMyCloud.techMyvpn'),
+"obox-tech-singbox": () => t('oboxMyCloud.techSingbox'),
+"obox-tech-automatic": () => t('oboxMyCloud.techAutomatic'),
+
+"obox-tech-management-title": () => t('oboxMyCloud.techManagementTitle'),
+"obox-tech-limits": () => t('oboxMyCloud.techLimits'),
+"obox-tech-time": () => t('oboxMyCloud.techTime'),
+"obox-tech-share": () => t('oboxMyCloud.techShare'),
+"obox-tech-monitor": () => t('oboxMyCloud.techMonitor'),
+
+"obox-tech-security-title": () => t('oboxMyCloud.techSecurityTitle'),
+"obox-tech-encryption": () => t('oboxMyCloud.techEncryption'),
+"obox-tech-control": () => t('oboxMyCloud.techControl'),
+"obox-tech-logs": () => t('oboxMyCloud.techLogs'),
+"obox-tech-privacy": () => t('oboxMyCloud.techPrivacy'),
+
+// 适用人群
+"obox-target-audience": () => t('oboxMyCloud.targetAudience'),
+"obox-audience-individuals-title": () => t('oboxMyCloud.audienceIndividualsTitle'),
+"obox-audience-individuals-desc": () => t('oboxMyCloud.audienceIndividualsDesc'),
+"obox-audience-teams-title": () => t('oboxMyCloud.audienceTeamsTitle'),
+"obox-audience-teams-desc": () => t('oboxMyCloud.audienceTeamsDesc'),
+"obox-audience-families-title": () => t('oboxMyCloud.audienceFamiliesTitle'),
+"obox-audience-families-desc": () => t('oboxMyCloud.audienceFamiliesDesc'),
+
+// 下载区域
+"obox-get-started": () => t('oboxMyCloud.getStarted'),
+"obox-download-desc": () => t('oboxMyCloud.downloadDesc'),
+"obox-app-store": () => t('oboxMyCloud.appStore'),
+"obox-google-play": () => t('oboxMyCloud.googlePlay'),
+"obox-direct-download": () => t('oboxMyCloud.directDownload'),
+"obox-contact-support": () => t('oboxMyCloud.contactSupport'),
+
+// 通用导航
+"back-to-products": () => t('backToProducts'),
     // 通用
     "copyright": () => `© ${getCompanyInfo('foundedYear')} ${getCompanyInfo('brand.name')}. ${t('common.copyright')}.`
 };
@@ -289,17 +373,65 @@ function updatePageTitle(pageId) {
  * 初始化页面导航功能
  */
 function initializePageNavigation() {
-    // 检查URL哈希，如果有则切换到对应页面
+    // 1. 移除所有可能存在的onclick属性，避免重复绑定
+    document.querySelectorAll('nav a').forEach(link => {
+        link.removeAttribute('onclick');
+    });
+    
+    // 2. 重新绑定导航事件（使用事件委托，避免重复绑定）
+    const navContainer = document.querySelector('nav');
+    if (navContainer) {
+        // 移除可能存在的旧事件监听器
+        navContainer.removeEventListener('click', handleNavClick);
+        
+        // 添加新的事件监听器
+        navContainer.addEventListener('click', handleNavClick);
+    }
+    
+    // 3. 检查URL哈希，如果有则切换到对应页面
     const hash = window.location.hash.substring(1);
     if (hash && document.getElementById(hash)) {
         showPage(hash);
     }
     
-    // 监听浏览器前进后退按钮
+    // 4. 监听浏览器前进后退按钮
     window.addEventListener('popstate', function() {
         const hash = window.location.hash.substring(1) || 'home';
         showPage(hash);
     });
+}
+
+/**
+ * 处理导航点击事件
+ * @param {Event} e - 点击事件
+ */
+function handleNavClick(e) {
+    const target = e.target;
+    
+    // 只处理导航链接
+    if (target.tagName === 'A' && target.getAttribute('href') === '#') {
+        e.preventDefault();
+        
+        // 根据data-text属性确定页面
+        const dataText = target.getAttribute('data-text');
+        let pageId = '';
+        
+        switch(dataText) {
+            case 'nav-home': pageId = 'home'; break;
+            case 'nav-about': pageId = 'about'; break;
+            case 'nav-products': pageId = 'products'; break;
+            case 'nav-manual': pageId = 'manual'; break;
+            case 'nav-contact': pageId = 'contact'; break;
+        }
+        
+        if (pageId) {
+            console.log('🔗 导航点击:', pageId);
+            showPage(pageId);
+            
+            // 更新URL哈希（不触发页面跳转）
+            history.pushState(null, null, `#${pageId}`);
+        }
+    }
 }
 
 // ===== 📱 移动端菜单功能 =====

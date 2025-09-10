@@ -248,8 +248,7 @@ window.LANGUAGE_TEXTS['zh-CN'] = {
         quickLinks: "快速链接",
         contactInfo: "联系信息", 
         followUs: "关注我们",
-        socialMedia: "微信 | 微博 | LinkedIn",
-        
+        socialMedia: "Facebook | Twitter | LinkedIn",
         // 联系信息
         email: "邮箱: service@situstechnologies.com",
         phone: "电话: +1 xxx-xxxx-xxxx",
@@ -262,7 +261,89 @@ window.LANGUAGE_TEXTS['zh-CN'] = {
         },
         
         copyright: "© 2025 Situs Technologies LLC. 保留所有权利."
-    }
+    },
+
+    // OBox MyCloud 产品页面
+    oboxMyCloud: {
+        // 基本信息
+        name: "OBox MyCloud",
+        tagline: "您的私人VPN，几分钟内完成设置！",
+        description: "担心公共VPN的隐私风险？被自建VPN的复杂性吓倒？OBox MyCloud专为无技术背景的个人和小团队设计。选择云服务商，一键设置私人VPN，享受安全、无限制的网络体验。",
+        
+        // CTA按钮
+        downloadNow: "立即下载",
+        watchDemo: "观看演示",
+        
+        // 功能特点
+        whyChoose: "为什么选择 OBox MyCloud？",
+        featureSetupTitle: "轻松设置",
+        featureSetupDesc: "无需编程——10分钟内创建您的VPN",
+        featurePrivacyTitle: "完全隐私", 
+        featurePrivacyDesc: "您的数据保存在您的服务器上，远离第三方",
+        featureGlobalTitle: "全球访问",
+        featureGlobalDesc: "轻松在全球范围内流媒体、工作或浏览",
+        featureManagementTitle: "简单管理",
+        featureManagementDesc: "通过直观的控制面板控制VPN并添加用户",
+        
+        // 截图说明
+        appScreenshots: "应用截图",
+        screenshot1Title: "选择云服务商",
+        screenshot1Desc: "支持DigitalOcean、Google Cloud、AWS等主流云服务",
+        screenshot2Title: "API身份认证", 
+        screenshot2Desc: "安全的API访问，保护您的云账户",
+        screenshot3Title: "配置分享",
+        screenshot3Desc: "支持多种VPN客户端，一键分享给家人朋友",
+        
+        // 视频演示
+        videoDemoTitle: "视频演示",
+        videoDemoDesc: "观看完整的设置教程，了解如何在10分钟内创建您的私人VPN",
+        
+        // 技术功能
+        keyFeatures: "核心功能",
+        techCloudTitle: "多云支持",
+        techDigitalocean: "DigitalOcean Droplet",
+        techGoogle: "Google Cloud VPS", 
+        techAws: "AWS EC2 VPS",
+        techMore: "更多云服务商陆续支持",
+        
+        techClientsTitle: "客户端支持",
+        techOutline: "Outline - 稳定可靠",
+        techMyvpn: "MyVPN - 配置加密",
+        techSingbox: "sing-box - 强力反审查",
+        techAutomatic: "自动选择最佳配置",
+        
+        techManagementTitle: "用户管理",
+        techLimits: "设置数据流量限制",
+        techTime: "时间访问控制",
+        techShare: "私人链接分享",
+        techMonitor: "实时使用监控",
+        
+        techSecurityTitle: "安全特性",
+        techEncryption: "端到端加密",
+        techControl: "完全数据控制", 
+        techLogs: "无日志记录",
+        techPrivacy: "隐私优先设计",
+        
+        // 适用人群
+        targetAudience: "适用人群",
+        audienceIndividualsTitle: "个人用户",
+        audienceIndividualsDesc: "寻求安全私人VPN的个人用户",
+        audienceTeamsTitle: "小团队",
+        audienceTeamsDesc: "需要快速访问全球内容的小团队",
+        audienceFamiliesTitle: "家庭用户", 
+        audienceFamiliesDesc: "想与家人或朋友分享私人网络的用户",
+        
+        // 下载区域
+        getStarted: "立即开始！",
+        downloadDesc: "下载OBox MyCloud，轻松解锁您的私人VPN云！",
+        appStore: "App Store 下载",
+        googlePlay: "Google Play 下载", 
+        directDownload: "直接下载 APK",
+        contactSupport: "有疑问？联系我们："
+    },
+    // 通用导航
+    backToProducts: "← 返回产品页面"
+
 };
 
 console.log('🇨🇳 中文语言包已加载');

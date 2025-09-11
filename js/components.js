@@ -38,13 +38,31 @@ function initializeAfterLoad() {
     // 🔧 修复：组件加载完成后，重新应用语言设置
     console.log('组件加载完成，开始应用语言设置');
     
-    // 检查 script.js 是否已经加载并且语言系统已初始化
-    if (typeof updatePageContent === 'function') {
-        // 重新更新页面内容，这次会包含刚加载的 header 和 footer
-        updatePageContent();
+    // 🔥 关键修复：调用正确的函数名
+    if (typeof applyTranslations === 'function') {
+        // 重新应用翻译到新加载的组件
+        applyTranslations();
         console.log('✅ 重新应用语言设置完成');
+        
+        // 🔧 额外修复：确保语言选择器状态正确
+        if (typeof updateLanguageSelector === 'function' && typeof CURRENT_LANGUAGE !== 'undefined') {
+            updateLanguageSelector(CURRENT_LANGUAGE);
+        }
+        
+        // 🔧 重新初始化移动端菜单（因为header刚加载完成）
+        if (typeof initializeMobileMenu === 'function') {
+            initializeMobileMenu();
+        }
     } else {
         console.warn('❌ script.js 尚未加载完成，无法应用语言设置');
+        
+        // 🔧 如果script.js还没加载完成，等待一下再试
+        setTimeout(() => {
+            if (typeof applyTranslations === 'function') {
+                applyTranslations();
+                console.log('✅ 延迟应用语言设置完成');
+            }
+        }, 500);
     }
 }
 

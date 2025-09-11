@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <title>网站加载中...</title>
+    <title data-text="obox-manual-page-title">OBox MyCloud iOS应用操作手册</title>
     
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -17,41 +17,424 @@
     <main>
         <section class="section">
             <div class="container">
-                <h2 data-text="manual-page-title">使用手册</h2>
+                <h1 data-text="obox-manual-title">OBox MyCloud iOS应用操作手册</h1>
+                <p class="lead" data-text="obox-manual-subtitle">版本 1.0 | 兼容 iOS 17.0+</p>
                 
-                <div class="manual-section">
-                    <h3 data-text="manual-quick-start">快速入门</h3>
-                    <div class="step">
-                        <h4 data-text="manual-step-1-title">步骤1：注册账户</h4>
-                        <p data-text="manual-step-1-desc">访问我们的官方网站，点击"注册"按钮，填写必要信息完成账户注册。</p>
-                    </div>
-                    <div class="step">
-                        <h4 data-text="manual-step-2-title">步骤2：登录系统</h4>
-                        <p data-text="manual-step-2-desc">使用注册的账户信息登录系统，首次登录建议修改默认密码。</p>
-                    </div>
-                    <div class="step">
-                        <h4 data-text="manual-step-3-title">步骤3：基本配置</h4>
-                        <p data-text="manual-step-3-desc">根据向导完成基本配置，包括个人信息、偏好设置等。</p>
-                    </div>
-                </div>
-
-                <div class="manual-section">
-                    <h3 data-text="manual-features-title">功能说明</h3>
-                    <h4 data-text="manual-main-features">主要功能</h4>
+                <!-- 快速导航 -->
+                <div class="manual-nav">
+                    <h3 data-text="manual-nav-title">快速导航</h3>
                     <ul>
-                        <li data-text="manual-feature-a"><strong>功能A：</strong>详细描述功能A的作用和使用方法</li>
-                        <li data-text="manual-feature-b"><strong>功能B：</strong>详细描述功能B的作用和使用方法</li>
-                        <li data-text="manual-feature-c"><strong>功能C：</strong>详细描述功能C的作用和使用方法</li>
+                        <li><a href="#overview" data-text="nav-overview">应用概述</a></li>
+                        <li><a href="#getting-started" data-text="nav-getting-started">入门指南</a></li>
+                        <li><a href="#cloud-providers" data-text="nav-cloud-providers">设置云服务商</a></li>
+                        <li><a href="#user-management" data-text="nav-user-management">用户管理</a></li>
+                        <li><a href="#vpn-sharing" data-text="nav-vpn-sharing">共享VPN配置</a></li>
+                        <li><a href="#server-management" data-text="nav-server-management">服务器管理</a></li>
+                        <li><a href="#dashboard" data-text="nav-dashboard">仪表板</a></li>
+                        <li><a href="#settings" data-text="nav-settings">设置和订阅</a></li>
+                        <li><a href="#troubleshooting" data-text="nav-troubleshooting">故障排除</a></li>
                     </ul>
                 </div>
 
-                <div class="manual-section">
-                    <h3 data-text="manual-faq-title">常见问题</h3>
-                    <h4 data-text="manual-faq-1-q">Q: 如何重置密码？</h4>
-                    <p data-text="manual-faq-1-a">A: 在登录页面点击"忘记密码"，按照提示操作即可重置密码。</p>
+                <!-- 应用概述 -->
+                <div id="overview" class="manual-section">
+                    <h2 data-text="overview-title">应用概述</h2>
+                    <p data-text="overview-description">OBox MyCloud是一款私人VPN管理应用，让您能够：</p>
                     
-                    <h4 data-text="manual-faq-2-q">Q: 如何联系技术支持？</h4>
-                    <p data-text="manual-faq-2-a">A: 可以通过以下方式联系我们：邮箱、电话或在线客服。</p>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <h4 data-text="feature-deploy-title">多云部署</h4>
+                            <p data-text="feature-deploy-desc">在多个云服务商上部署VPN服务器（DigitalOcean、Google Cloud、AWS）</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4 data-text="feature-users-title">用户管理</h4>
+                            <p data-text="feature-users-desc">创建和管理基于时长和流量限制的VPN用户</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4 data-text="feature-sharing-title">安全共享</h4>
+                            <p data-text="feature-sharing-desc">安全地共享VPN配置</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4 data-text="feature-monitoring-title">性能监控</h4>
+                            <p data-text="feature-monitoring-desc">监控服务器性能和用户活动</p>
+                        </div>
+                    </div>
+
+                    <div class="requirements-list">
+                        <h3 data-text="system-requirements-title">系统要求</h3>
+                        <ul>
+                            <li data-text="req-ios">iOS 17.0或更高版本</li>
+                            <li data-text="req-internet">活跃的互联网连接</li>
+                            <li data-text="req-cloud-account">云服务商账户（DigitalOcean、Google Cloud或AWS）</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 入门指南 -->
+                <div id="getting-started" class="manual-section">
+                    <h2 data-text="getting-started-title">入门指南</h2>
+                    
+                    <h3 data-text="initial-setup-title">初始设置</h3>
+                    <div class="step">
+                        <h4 data-text="setup-step-1">1. 下载并安装应用</h4>
+                        <p data-text="setup-step-1-desc">从App Store下载OBox MyCloud应用并完成安装</p>
+                        <div class="step-image">
+                            <img src="images/OBoxTab/DownloadApp.jpg" 
+                                alt="下载OBox MyCloud" 
+                                data-text="screenshot-placeholder-main">
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <h4 data-text="setup-step-2">2. 启动应用</h4>
+                        <p data-text="setup-step-2-desc">启动应用并查看欢迎界面，浏览各个标签页以熟悉界面：</p>
+                        <ul>
+                            <li data-text="tab-cloud-providers"><strong data-text="tab-cloud-providers-strong">云服务商：</strong><span data-text="tab-cloud-providers-desc">设置和管理云服务器</span></li>
+                            <li data-text="tab-dashboard"><strong data-text="tab-dashboard-strong">仪表板：</strong><span data-text="tab-dashboard-desc">概览和快速操作</span></li>
+                            <li data-text="tab-user-management"><strong data-text="tab-user-management-strong">用户管理：</strong><span data-text="tab-user-management-desc">创建和管理VPN用户</span></li>
+                            <li data-text="tab-vpn-servers"><strong data-text="tab-vpn-servers-strong">VPN服务器：</strong><span data-text="tab-vpn-servers-desc">连接和管理服务器</span></li>
+                            <li data-text="tab-settings"><strong data-text="tab-settings-strong">设置：</strong><span data-text="tab-settings-desc">订阅和应用偏好设置</span></li>
+                        </ul>
+                        <div class="step-image">
+                            <img src="images/OBoxTab/01CloudProvider.jpeg" 
+                                alt="DigitalOcean登录界面" 
+                                data-text="screenshot-placeholder-main">
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <h4 data-text="setup-step-3">3. 首次配置</h4>
+                        <ol>
+                            <li data-text="config-step-1">从云服务商标签页开始</li>
+                            <li data-text="config-step-2">选择您首选的云服务商</li>
+                            <li data-text="config-step-3">按照所选服务商的设置向导操作</li>
+                            <li data-text="config-step-4">创建您的第一台VPN服务器</li>
+                            <li data-text="config-step-5">设置您的第一个用户账户</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 设置云服务商 -->
+                <div id="cloud-providers" class="manual-section">
+                    <h2 data-text="cloud-providers-title">设置云服务商</h2>
+                    
+                    <div class="provider-section">
+                        <div class="provider-tabs">
+                            <button class="provider-tab active" onclick="showProvider('digitalocean')" data-text="provider-digitalocean">DigitalOcean</button>
+                            <button class="provider-tab" onclick="showProvider('googlecloud')" data-text="provider-googlecloud">Google Cloud</button>
+                            <button class="provider-tab" onclick="showProvider('aws')" data-text="provider-aws">AWS</button>
+                        </div>
+
+                        <!-- DigitalOcean设置 -->
+                        <div id="digitalocean-setup" class="provider-content">
+                            <h3 data-text="do-setup-title">DigitalOcean设置</h3>
+                            
+                            <h4 data-text="do-auth-title">步骤1：身份验证</h4>
+                            <ol>
+                                <li data-text="do-auth-1">导航至云服务商标签页</li>
+                                <li data-text="do-auth-2">选择DigitalOcean</li>
+                                <li data-text="do-auth-3">转到身份验证标签</li>
+                                <li data-text="do-auth-4">获取您的API密钥：
+                                    <ul>
+                                        <li data-text="do-api-1">访问DigitalOcean控制台</li>
+                                        <li data-text="do-api-2">转到API部分</li>
+                                        <li data-text="do-api-3">生成新的个人访问令牌</li>
+                                    </ul>
+                                </li>
+                                <li data-text="do-auth-5">在应用中输入API密钥</li>
+                                <li data-text="do-auth-6">启用"记住密钥"以便使用</li>
+                                <li data-text="do-auth-7">点击"连接"进行身份验证</li>
+                            </ol>
+                            <div class="step-image">
+                                <img src="images/DigitalOcean/01DigitalOceanLogin.jpeg" 
+                                    alt="DigitalOcean登录界面">
+                            </div>
+
+                            <h4 data-text="do-region-title">步骤2：区域选择</h4>
+                            <ol>
+                                <li data-text="do-region-1">移至区域标签</li>
+                                <li data-text="do-region-2">选择最接近您用户的区域</li>
+                                <li data-text="do-region-3">推荐区域：NYC1、SFO3、SGP1、FRA1、LON1</li>
+                                <li data-text="do-region-4">选择后点击"继续"</li>
+                            </ol>
+                            <div class="step-image">
+                                <img src="images/DigitalOcean/02DigitalOceanRegion.jpeg" 
+                                    alt="DigitalOcean区域选择界面">
+                            </div>
+
+                            <h4 data-text="do-droplet-title">步骤3：Droplet创建</h4>
+                            <ol>
+                                <li data-text="do-droplet-1">转到Droplet标签</li>
+                                <li data-text="do-droplet-2">点击"创建新Droplet"</li>
+                                <li data-text="do-droplet-3">配置基本设置：
+                                    <ul>
+                                        <li data-text="do-config-name">名称：使用自动生成的名称或输入自定义名称</li>
+                                        <li data-text="do-config-size">大小：选择推荐的VPN大小（≤$6/月）</li>
+                                        <li data-text="do-config-ssh">SSH密钥：使用"自动生成密钥"（推荐）</li>
+                                    </ul>
+                                </li>
+                                <li data-text="do-droplet-4">点击"创建"并等待完成</li>
+                            </ol>
+                            <div class="step-image-slideshow">
+                                <img src="images/DigitalOcean/03CreateDroplet.jpeg" alt="创建Droplet界面">
+                                <img src="images/DigitalOcean/04CreatingDroplet.jpeg" alt="Droplet创建中">
+                                <img src="images/DigitalOcean/05CreatedDroplet.jpeg" alt="Droplet创建完成">
+                            </div>
+
+                            <h4 data-text="do-vpn-title">步骤4：VPN安装</h4>
+                            <ol>
+                                <li data-text="do-vpn-1">移至VPN标签</li>
+                                <li data-text="do-vpn-2">点击"开始安装"</li>
+                                <li data-text="do-vpn-3">等待SSH连接和Outline安装</li>
+                                <li data-text="do-vpn-4">提示时保存配置</li>
+                            </ol>
+                            <div class="step-image-slideshow">
+                                <img src="images/DigitalOcean/06StartInstallOutline.jpeg" alt="开始安装Outline">
+                                <img src="images/DigitalOcean/07InstallingOutline.jpeg" alt="Outline安装中……">
+                                <img src="images/DigitalOcean/08InstalledOutline.jpeg" alt="Outline安装完成">
+                            </div>
+                        </div>
+
+                        <!-- Google Cloud设置 -->
+                        <div id="googlecloud-setup" class="provider-content" style="display: none;">
+                            <h3 data-text="gc-setup-title">Google Cloud Platform设置</h3>
+                            
+                            <h4 data-text="gc-auth-title">步骤1：身份验证</h4>
+                            <ol>
+                                <li data-text="gc-auth-1">选择Google Cloud服务商</li>
+                                <li data-text="gc-auth-2">点击"使用Google登录"</li>
+                                <li data-text="gc-auth-3">完成Google身份验证过程</li>
+                                <li data-text="gc-auth-4">成功后将显示您的账户信息</li>
+                            </ol>
+
+                            <h4 data-text="gc-project-title">步骤2：项目设置</h4>
+                            <ol>
+                                <li data-text="gc-project-1">转到项目标签</li>
+                                <li data-text="gc-project-2">选择以下之一：
+                                    <ul>
+                                        <li data-text="gc-project-existing">从列表中选择现有项目，或</li>
+                                        <li data-text="gc-project-new">点击"创建新项目"并输入项目名称</li>
+                                    </ul>
+                                </li>
+                                <li data-text="gc-project-3">点击"继续到API"</li>
+                            </ol>
+
+                            <div class="info-box">
+                                <strong data-text="gc-note-title">注意：</strong>
+                                <span data-text="gc-note-desc">Google Cloud提供免费套餐，包含E2 Micro实例免费使用。</span>
+                            </div>
+                        </div>
+
+                        <!-- AWS设置 -->
+                        <div id="aws-setup" class="provider-content" style="display: none;">
+                            <h3 data-text="aws-setup-title">AWS设置</h3>
+                            
+                            <h4 data-text="aws-auth-title">步骤1：身份验证</h4>
+                            <ol>
+                                <li data-text="aws-auth-1">选择AWS服务商</li>
+                                <li data-text="aws-auth-2">输入您的访问密钥ID和秘密访问密钥</li>
+                                <li data-text="aws-auth-3">如需要，启用"记住凭据"</li>
+                                <li data-text="aws-auth-4">点击"连接"</li>
+                            </ol>
+
+                            <div class="warning-box">
+                                <strong data-text="aws-security-title">安全提示：</strong>
+                                <span data-text="aws-security-desc">建议为OBox MyCloud创建专用的IAM用户，而不是使用根账户凭据。</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 用户管理 -->
+                <div id="user-management" class="manual-section">
+                    <h2 data-text="user-management-title">创建和管理用户</h2>
+                    
+                    <h3 data-text="create-user-title">创建新用户</h3>
+                    <ol>
+                        <li data-text="create-user-1">导航至用户管理标签页</li>
+                        <li data-text="create-user-2">点击"+"按钮</li>
+                        <li data-text="create-user-3">填写用户详细信息：
+                            <ul>
+                                <li data-text="user-field-name">用户名：必填，唯一标识符</li>
+                                <li data-text="user-field-email">邮箱：可选，用于参考</li>
+                                <li data-text="user-field-duration">使用期限：设置过期时间（1-12个月或无限制）</li>
+                                <li data-text="user-field-traffic">流量限制：设置数据配额（1GB-1000GB或无限制）</li>
+                            </ul>
+                        </li>
+                        <li data-text="create-user-4">查看预览部分以确保准确性</li>
+                        <li data-text="create-user-5">点击"创建用户"</li>
+                    </ol>
+                     <div class="step-image">
+                        <img src="images/OBoxTab/02CreatingUser.jpeg" 
+                            alt="创建VPN用户">
+                    </div>
+
+                    <div class="step-image">
+                        <img src="images/OBoxTab/03SharedLink-1.jpeg" 
+                            alt="VPN用户列表">
+                    </div>
+
+                    <div class="info-box">
+                        <h4 data-text="subscription-limits-title">订阅限制</h4>
+                        <ul>
+                            <li data-text="sub-free">免费套餐：最多10个用户</li>
+                            <li data-text="sub-premium">高级套餐：50、200或无限用户</li>
+                            <li data-text="sub-upgrade">达到限制时在设置中升级订阅</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- VPN配置共享 -->
+                <div id="vpn-sharing" class="manual-section">
+                    <h2 data-text="vpn-sharing-title">共享VPN配置</h2>
+                    
+                    <p data-text="sharing-overview">通过多种格式与用户共享VPN访问：</p>
+                    
+                    <div class="sharing-methods">
+                        <div class="sharing-card">
+                            <h4 data-text="outline-sdk-title">Outline SDK</h4>
+                            <p data-text="outline-sdk-desc">直接应用集成</p>
+                        </div>
+                        <div class="sharing-card">
+                            <h4 data-text="myvpn-encrypted-title">MyVPN加密</h4>
+                            <p data-text="myvpn-encrypted-desc">密码安全共享</p>
+                        </div>
+                        <div class="sharing-card">
+                            <h4 data-text="singbox-title">SingBox</h4>
+                            <p data-text="singbox-desc">高级客户端配置</p>
+                        </div>
+                    </div>
+
+                     <div class="step-image">
+                        <img src="images/OBoxTab/03SharedLink-2.jpeg" 
+                            alt="共享VPN订阅链接">
+                    </div>
+
+                    <div class="warning-box">
+                        <h4 data-text="security-best-practices-title">安全最佳实践</h4>
+                        <ul>
+                            <li data-text="security-encrypted">使用加密共享进行敏感部署</li>
+                            <li data-text="security-separate">单独共享密码和加密链接</li>
+                            <li data-text="security-expiry">为临时访问设置适当的过期时间</li>
+                            <li data-text="security-monitor">定期监控用户活动</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 服务器管理 -->
+                <div id="server-management" class="manual-section">
+                    <h2 data-text="server-management-title">管理VPN服务器</h2>
+                    
+                    <h3 data-text="server-overview-title">服务器列表概览</h3>
+                    <p data-text="server-overview-desc">VPN服务器标签页显示所有已配置的服务器：</p>
+                    <ul>
+                        <li data-text="server-status-indicators">连接状态：在线（绿色）、离线（红色）、连接中（橙色）</li>
+                        <li data-text="server-info">服务器信息：名称、IP地址、端口、版本</li>
+                        <li data-text="server-user-count">用户数量：每台服务器上的用户数</li>
+                    </ul>
+                    <div class="step-image">
+                        <img src="images/OBoxTab/04VPNManger.jpeg" 
+                            alt="管理VPN服务器">
+                    </div>
+                </div>
+
+                <!-- 仪表板 -->
+                <div id="dashboard" class="manual-section">
+                    <h2 data-text="dashboard-title">仪表板概览</h2>
+                    
+                    <div class="info-box">
+                        <h4 data-text="auto-refresh-title">自动刷新</h4>
+                        <ul>
+                            <li data-text="auto-refresh-interval">仪表板每30秒自动更新</li>
+                            <li data-text="manual-refresh">下拉手动刷新</li>
+                            <li data-text="realtime-status">服务器连接的实时状态</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 设置和订阅 -->
+                <div id="settings" class="manual-section">
+                    <h2 data-text="settings-title">设置和订阅</h2>
+                    
+                    <div class="step-image">
+                        <img src="images/OBoxTab/05Settings.jpeg" 
+                            alt="设置和订阅">
+                    </div>
+
+                    <div class="info-box">
+                        <h4 data-text="app-settings-title">应用设置</h4>
+                        <ul>
+                            <li data-text="ui-settings">用户界面：主题选择、语言、通知</li>
+                            <li data-text="data-management">数据管理：自动备份、同步设置、存储管理</li>
+                            <li data-text="account-info">账户信息：应用版本、支持、隐私政策</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 故障排除 -->
+                <div id="troubleshooting" class="manual-section">
+                    <h2 data-text="troubleshooting-title">故障排除</h2>
+                    
+                    <h3 data-text="common-issues-title">常见问题和解决方案</h3>
+                    
+                    <div class="feature-card">
+                        <h4 data-text="connection-issues-title">连接问题</h4>
+                        <p><strong data-text="connection-problem">问题：</strong><span data-text="connection-problem-desc">无法连接到VPN服务器</span></p>
+                        <p><strong data-text="connection-solution">解决方案：</strong></p>
+                        <ol>
+                            <li data-text="connection-sol-1">检查互联网连接</li>
+                            <li data-text="connection-sol-2">在VPN服务器标签中验证服务器状态</li>
+                            <li data-text="connection-sol-3">尝试连接到不同的服务器</li>
+                            <li data-text="connection-sol-4">重启应用并重试</li>
+                            <li data-text="connection-sol-5">检查云服务商账户状态</li>
+                        </ol>
+                    </div>
+
+                    <div class="warning-box">
+                        <h4 data-text="error-messages-title">常见错误消息</h4>
+                        <ul>
+                            <li data-text="error-subscription-limit">"订阅限制已达到" - 升级订阅或删除未使用的用户</li>
+                            <li data-text="error-server-unreachable">"服务器无法到达" - 检查互联网连接，验证服务器状态</li>
+                            <li data-text="error-invalid-config">"配置无效" - 重新创建服务器或从备份恢复</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-box">
+                        <h4 data-text="backup-recovery-title">备份和恢复</h4>
+                        <ul>
+                            <li data-text="backup-regular">定期备份：每周导出数据库</li>
+                            <li data-text="backup-before-update">更新前：应用更新前务必备份</li>
+                            <li data-text="backup-multiple-locations">多个位置：在多个位置存储备份</li>
+                            <li data-text="backup-test-restore">测试恢复：定期验证备份完整性</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 快速参考 -->
+                <div class="manual-section">
+                    <h2 data-text="quick-reference-title">快速参考</h2>
+                    
+                    <h3 data-text="basic-workflow-title">基本工作流程</h3>
+                    <ol>
+                        <li data-text="workflow-1">首次设置：云服务商 → 身份验证 → 创建服务器 → 安装VPN</li>
+                        <li data-text="workflow-2">添加用户：用户管理 → 创建用户 → 共享配置</li>
+                        <li data-text="workflow-3">连接VPN：VPN服务器 → 选择服务器 → 连接</li>
+                        <li data-text="workflow-4">共享访问：用户管理 → 选择用户 → 选择共享方法</li>
+                    </ol>
+
+                    <div class="info-box">
+                        <h4 data-text="support-resources-title">支持资源</h4>
+                        <ul>
+                            <li data-text="app-version-check">应用版本：在设置中检查最新版本</li>
+                            <li data-text="system-req-reminder">系统要求：iOS 17.0+</li>
+                            <li data-text="storage-req">存储空间：大约需要50MB</li>
+                            <li data-text="network-req">网络：稳定的互联网连接至关重要</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <p data-text="manual-conclusion">本操作手册涵盖OBox MyCloud的核心功能。如需高级功能或特定技术问题，请查阅应用内帮助系统或联系技术支持。</p>
                 </div>
             </div>
         </section>

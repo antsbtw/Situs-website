@@ -353,15 +353,6 @@ main {
     margin-top: 1.5rem;
 }
 
-.step {
-    background: #f8f9fa;
-    padding: 1.5rem;
-    margin: 1rem 0;
-    border-left: 4px solid #3498db;
-    border-radius: 0 5px 5px 0;
-    transition: all 0.3s ease;
-}
-
 .step:hover {
     background: #e9ecef;
     transform: translateX(5px);
@@ -1001,9 +992,10 @@ footer > .container > p {
         text-align: center;
     }
     
-    .step-image {
-        height: 400px;
-        max-width: 250px;
+    .step-image,
+    .step-image-slideshow {
+        max-width: 200px;    /* 只调整最大宽度 */
+        margin: 15px auto;   /* 保持aspect-ratio生效 */
     }
 }
 
@@ -1020,13 +1012,15 @@ footer > .container > p {
         padding: 15px;
     }
     
-    .step {
-        padding: 12px;
+    .step-image,
+    .step-image-slideshow {
+        max-width: 160px;    /* 删除height设置 */
+        margin: 10px auto;
     }
     
-    .step-image {
-        height: 350px;
-        max-width: 200px;
+    .step {
+        padding: 12px;
+        margin-bottom: 20px;
     }
 }
 

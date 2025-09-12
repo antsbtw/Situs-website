@@ -299,7 +299,7 @@ main {
 
 .product-image {
     height: 200px;
-    background: #f0f0f0;
+    background: linear-gradient(45deg, #83B8FF 0%, #C8C4FF 100%);
     display: flex;
     align-items: center;
     justify-content: center;

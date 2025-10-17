@@ -11,7 +11,6 @@ let CURRENT_LANGUAGE = 'zh-CN';
  */
 function getText(key) {
     if (!window.LANGUAGE_TEXTS || !window.LANGUAGE_TEXTS[CURRENT_LANGUAGE]) {
-        console.warn(`语言包未加载: ${CURRENT_LANGUAGE}`);
         return key;
     }
     
@@ -24,18 +23,13 @@ function getText(key) {
  */
 function switchLanguage(langCode) {
     if (!window.LANGUAGE_TEXTS || !window.LANGUAGE_TEXTS[langCode]) {
-        console.error(`不支持的语言: ${langCode}`);
         return;
     }
     
     CURRENT_LANGUAGE = langCode;
     applyTranslations();
     localStorage.setItem('preferred-language', langCode);
-    
-    // 更新语言切换按钮状态
     updateLanguageSelector(langCode);
-    
-    console.log(`语言切换为: ${langCode}`);
 }
 
 /**
@@ -43,10 +37,7 @@ function switchLanguage(langCode) {
  */
 function applyTranslations() {
     const texts = window.LANGUAGE_TEXTS[CURRENT_LANGUAGE];
-    if (!texts) {
-        console.warn(`Language pack for ${CURRENT_LANGUAGE} not found`);
-        return;
-    }
+    if (!texts) return;
     
     // 更新页面标题
     const titleElement = document.querySelector('title[data-text]');
@@ -79,19 +70,14 @@ function applyTranslations() {
                     element.textContent = texts[textKey];
                 }
             }
-        } else {
-            console.warn(`Translation missing: ${textKey} for language ${CURRENT_LANGUAGE}`);
         }
     });
-    
-    console.log(`Applied translations for language: ${CURRENT_LANGUAGE}`);
 }
 
 /**
  * 更新语言选择器显示
  */
 function updateLanguageSelector(langCode) {
-    // 更新导航中的语言选择器
     const langButton = document.querySelector('.lang-btn');
     
     if (langButton) {
@@ -102,13 +88,11 @@ function updateLanguageSelector(langCode) {
         langButton.textContent = langNames[langCode] || langCode;
     }
     
-    // 更新语言下拉选择器
     const langSelector = document.querySelector('.language-selector select');
     if (langSelector) {
         langSelector.value = langCode;
     }
     
-    // 更新HTML lang属性
     document.documentElement.lang = langCode;
 }
 
@@ -122,13 +106,10 @@ function initializeLanguage() {
     // 优先级：保存的语言 > 浏览器语言 > 默认中文
     if (savedLang && window.LANGUAGE_TEXTS && window.LANGUAGE_TEXTS[savedLang]) {
         CURRENT_LANGUAGE = savedLang;
-        console.log(`恢复保存的语言: ${savedLang}`);
     } else if (window.LANGUAGE_TEXTS && window.LANGUAGE_TEXTS[browserLang]) {
         CURRENT_LANGUAGE = browserLang;
-        console.log(`使用浏览器语言: ${browserLang}`);
     } else {
         CURRENT_LANGUAGE = 'zh-CN';
-        console.log(`使用默认语言: zh-CN`);
     }
 }
 
@@ -166,24 +147,53 @@ function showProvider(providerId) {
  * 初始化移动端菜单
  */
 function initializeMobileMenu() {
-    // 等待组件加载完成
-    setTimeout(() => {
+    let attempts = 0;
+    const maxAttempts = 10;
+    
+    const tryInitialize = () => {
+        attempts++;
         const mobileMenuBtn = document.querySelector('.mobile-menu');
         const navLinks = document.querySelector('.nav-links');
         
         if (mobileMenuBtn && navLinks) {
-            mobileMenuBtn.addEventListener('click', function() {
+            // 移除可能存在的旧事件监听器
+            const newBtn = mobileMenuBtn.cloneNode(true);
+            mobileMenuBtn.parentNode.replaceChild(newBtn, mobileMenuBtn);
+            
+            // 添加点击事件
+            newBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
                 toggleMobileMenu();
+            });
+            
+            // 点击导航链接关闭菜单
+            const links = navLinks.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    closeMobileMenu();
+                });
             });
             
             // 点击页面其他地方关闭菜单
             document.addEventListener('click', function(e) {
-                if (!mobileMenuBtn.contains(e.target) && !navLinks.contains(e.target)) {
-                    closeMobileMenu();
+                if (!newBtn.contains(e.target) && !navLinks.contains(e.target)) {
+                    if (navLinks.classList.contains('show')) {
+                        closeMobileMenu();
+                    }
                 }
             });
+            
+            return true;
+        } else {
+            if (attempts < maxAttempts) {
+                setTimeout(tryInitialize, 200);
+            }
+            return false;
         }
-    }, 400);
+    };
+    
+    tryInitialize();
 }
 
 /**
@@ -194,10 +204,10 @@ function toggleMobileMenu() {
     const mobileMenuBtn = document.querySelector('.mobile-menu');
     
     if (navLinks) {
-        navLinks.classList.toggle('show');
+        const isShowing = navLinks.classList.toggle('show');
         
         if (mobileMenuBtn) {
-            mobileMenuBtn.textContent = navLinks.classList.contains('show') ? '✕' : '☰';
+            mobileMenuBtn.textContent = isShowing ? '✕' : '☰';
         }
     }
 }
@@ -334,8 +344,6 @@ function initializeWebsite() {
             switchLanguage(this.value);
         });
     }
-    
-    console.log('网站初始化完成');
 }
 
 // ===== 🌐 全局函数导出 =====

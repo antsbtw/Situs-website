@@ -36,7 +36,12 @@ window.LANGUAGE_TEXTS['zh-CN'] = {
     'footer-social-media': 'Facebook | Twitter | LinkedIn',
     'contact-email-label': '邮箱',
     'contact-phone-label': '电话',
+    // 👇 在这里添加以下新内容 👇
+    'footer-legal': '法律信息',
+    'footer-privacy-policy': '隐私政策',
+    'footer-terms-conditions': '服务条款',
     
+
     // 通用按钮和状态
     'loading': '加载中...',
     'learn-more-btn': '了解产品',

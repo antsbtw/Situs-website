@@ -36,6 +36,10 @@ window.LANGUAGE_TEXTS['en-US'] = {
     'footer-social-media': 'Facebook | Twitter | LinkedIn',
     'contact-email-label': 'Email',
     'contact-phone-label': 'Phone',
+    // 👇 Add these new entries here 👇
+    'footer-legal': 'Legal',
+    'footer-privacy-policy': 'Privacy Policy',
+    'footer-terms-conditions': 'Terms & Conditions',
     
     // Common Buttons and Status
     'loading': 'Loading...',

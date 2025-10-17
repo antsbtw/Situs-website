@@ -6,15 +6,46 @@
     <meta name="description" content="Terms and Conditions for OBox MyCloud - User agreement and guidelines">
     <title>Terms & Conditions - OBox MyCloud | Situs Technologies</title>
     
-    <!-- CSS -->
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/product.css">
-    
     <style>
+        /* 重置默认样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        /* 简单的顶部导航条 */
+        .simple-header {
+            background-color: #2c3e50;
+            padding: 15px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .simple-header a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.95em;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: opacity 0.3s;
+        }
+
+        .simple-header a:hover {
+            opacity: 0.8;
+        }
+
         .legal-container {
             max-width: 900px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 60px 20px 80px;
             line-height: 1.8;
         }
         
@@ -27,8 +58,9 @@
         
         .legal-header h1 {
             font-size: 2.5em;
-            color: #333;
+            color: #2c3e50;
             margin-bottom: 10px;
+            font-weight: 700;
         }
         
         .legal-header .last-updated {
@@ -44,6 +76,7 @@
             margin-bottom: 20px;
             padding-bottom: 10px;
             border-bottom: 1px solid #e0e0e0;
+            font-weight: 600;
         }
         
         .legal-content h3 {
@@ -51,6 +84,7 @@
             font-size: 1.3em;
             margin-top: 25px;
             margin-bottom: 15px;
+            font-weight: 600;
         }
         
         .legal-content p {
@@ -75,6 +109,10 @@
             margin: 25px 0;
             border-radius: 4px;
         }
+
+        .highlight-box p {
+            margin-bottom: 0;
+        }
         
         .important-box {
             background-color: #f8d7da;
@@ -82,6 +120,11 @@
             padding: 20px;
             margin: 25px 0;
             border-radius: 4px;
+        }
+
+        .important-box p {
+            margin-bottom: 0;
+            font-weight: 600;
         }
         
         .contact-section {
@@ -94,28 +137,64 @@
         .contact-section h3 {
             margin-top: 0;
         }
-        
-        .back-link {
-            display: inline-block;
-            margin-bottom: 20px;
+
+        .contact-section a {
             color: #007bff;
             text-decoration: none;
-            font-size: 1em;
         }
-        
-        .back-link:hover {
+
+        .contact-section a:hover {
             text-decoration: underline;
+        }
+
+        /* 简单页脚 */
+        .simple-footer {
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+        }
+
+        .simple-footer p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+
+        .simple-footer a {
+            color: #3498db;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .simple-footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .legal-header h1 {
+                font-size: 2em;
+            }
+
+            .legal-content h2 {
+                font-size: 1.5em;
+            }
+
+            .legal-container {
+                padding: 40px 15px 60px;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <div id="header-placeholder"></div>
+    <!-- 简单的顶部导航 -->
+    <header class="simple-header">
+        <a href="../index.html">← Back to Home</a>
+    </header>
 
     <!-- Main Content -->
     <main class="legal-container">
-        <a href="../index.html" class="back-link">← Back to Home</a>
-        
         <div class="legal-header">
             <h1>Terms & Conditions</h1>
             <p class="last-updated">Last Updated: January 1, 2025</p>
@@ -125,7 +204,7 @@
             <p>These Terms and Conditions ("Terms") govern your use of the <strong>OBox MyCloud</strong> application ("Application") for mobile devices, created by <strong>Situs Technologies LLC</strong> ("Service Provider", "we", "us", or "our") as a Freemium service.</p>
 
             <div class="important-box">
-                <p><strong>By downloading, accessing, or using the Application, you agree to be bound by these Terms. If you do not agree to these Terms, do not use the Application.</strong></p>
+                <p>By downloading, accessing, or using the Application, you agree to be bound by these Terms. If you do not agree to these Terms, do not use the Application.</p>
             </div>
 
             <h2>1. Acceptance of Terms</h2>
@@ -320,8 +399,8 @@
             <h2>11. Limitation of Liability</h2>
             
             <div class="important-box">
-                <h3>To the Maximum Extent Permitted by Law:</h3>
-                <ul>
+                <h3 style="margin-top: 0;">To the Maximum Extent Permitted by Law:</h3>
+                <ul style="margin-bottom: 0;">
                     <li>The Application is provided "AS IS" and "AS AVAILABLE" without warranties of any kind</li>
                     <li>We do not warrant that the Application will be error-free or uninterrupted</li>
                     <li>We are not liable for any loss of data, profits, or business opportunities</li>
@@ -446,11 +525,14 @@
         </div>
     </main>
 
-    <!-- Footer -->
-    <div id="footer-placeholder"></div>
-
-    <!-- Scripts -->
-    <script src="../js/components.js"></script>
-    <script src="../js/script.js"></script>
+    <!-- 简单页脚 -->
+    <footer class="simple-footer">
+        <p>&copy; 2025 Situs Technologies LLC. All rights reserved.</p>
+        <p>
+            <a href="../index.html">Home</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-conditions.html">Terms & Conditions</a>
+        </p>
+    </footer>
 </body>
 </html>

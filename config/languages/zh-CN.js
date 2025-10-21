@@ -239,6 +239,12 @@ window.LANGUAGE_TEXTS['zh-CN'] = {
     'nav-settings': '设置和订阅',
     'nav-troubleshooting': '故障排除',
     
+    'obox-ppt-title': '快速了解 OBox MyCloud',
+    'obox-ppt-subtitle': '通过演示文稿了解如何轻松搭建您的私人VPN',
+    'manual-video-title': '视频操作教程',
+    'manual-video-subtitle': '跟随视频一步步学习如何使用 OBox MyCloud',
+    'watch-on-youtube': '在 YouTube 观看',
+    
     // 应用概述
     'overview-title': '应用概述',
     'overview-description': 'OBox MyCloud是一款私人VPN管理应用，让您能够：',

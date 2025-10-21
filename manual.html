@@ -9,12 +9,120 @@
     
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <style>
+        /* 视频教程区域样式 */
+        .video-tutorial {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 80px 20px;
+            margin-bottom: 60px;
+        }
+        
+        .video-tutorial .container {
+            max-width: 1400px;
+        }
+        
+        .video-tutorial h2 {
+            color: white;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        
+        .video-tutorial p {
+            color: rgba(255,255,255,0.9);
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+        
+        .video-wrapper {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .video-embed {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 */
+            background: #000;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .video-embed iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .video-info {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .video-info a {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+        
+        .video-info a:hover {
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 768px) {
+            .video-tutorial {
+                padding: 50px 20px;
+            }
+            
+            .video-tutorial h2 {
+                font-size: 1.8em;
+            }
+            
+            .video-tutorial p {
+                font-size: 1em;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- 动态加载的header组件 -->
     <div id="header-placeholder"></div>
 
     <main>
+        <!-- 视频教程区域 - 新增 -->
+        <section class="video-tutorial">
+            <div class="container">
+                <h2 data-text="manual-video-title">视频操作教程</h2>
+                <p data-text="manual-video-subtitle">跟随视频一步步学习如何使用 OBox MyCloud</p>
+                <div class="video-wrapper">
+                    <div class="video-embed">
+                        <iframe 
+                            src="https://www.youtube.com/embed/bKpXO881c78" 
+                            title="OBox MyCloud 完整操作教程" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <a href="https://youtu.be/bKpXO881c78" target="_blank" data-text="watch-on-youtube">在 YouTube 观看</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 原有的详细手册内容 -->
         <section class="section">
             <div class="container">
                 <h1 data-text="obox-manual-title">OBox MyCloud iOS应用操作手册</h1>

@@ -7,16 +7,77 @@
     <meta name="keywords" content="">
     <title>网站加载中...</title>
     
-    <!-- 引入现有样式文件 -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- 引入产品页面专用样式 -->
     <link rel="stylesheet" href="css/product.css">
-    
-    <!-- 网站图标 -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <style>
+        /* PPT展示区域样式 */
+        .ppt-showcase {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 80px 20px;
+            margin-top: -20px;
+        }
+        
+        .ppt-showcase .container {
+            max-width: 1400px;
+        }
+        
+        .ppt-showcase h2 {
+            color: white;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        
+        .ppt-showcase p {
+            color: rgba(255,255,255,0.9);
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+        
+        .ppt-embed-wrapper {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .ppt-embed {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            background: #f8f9fa;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .ppt-embed iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        @media (max-width: 768px) {
+            .ppt-showcase {
+                padding: 50px 20px;
+            }
+            
+            .ppt-showcase h2 {
+                font-size: 1.8em;
+            }
+            
+            .ppt-showcase p {
+                font-size: 1em;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- 🆕 动态加载的header组件 -->
     <div id="header-placeholder"></div>
 
     <main>
@@ -24,13 +85,30 @@
         <section class="product-hero">
             <div class="container">
                 <h1 data-text="obox-name">OBox MyCloud</h1>
-                <p class="tagline" data-text="obox-tagline">您的私人VPN，几分钟内完成设置！</p>
+                <p class="tagline" data-text="obox-tagline">10分钟搭建您的私人VPN!</p>
                 <p class="description" data-text="obox-description">
-                    担心公共VPN的隐私风险？被自建VPN的复杂性吓倒？OBox MyCloud专为无技术背景的个人和小团队设计。选择云服务商，一键设置私人VPN，享受安全、无限制的网络体验。
+                    使用 Digital Ocean 或 AWS,一键安装 Outline,实现安全的全球访问和完全隐私保护。无需技术背景,专为个人和小团队设计。
                 </p>
                 <div class="product-cta-buttons">
                     <a href="#download" class="product-btn product-btn-primary" data-text="obox-download-now">立即下载</a>
-                    <a href="#video" class="product-btn product-btn-secondary" data-text="obox-watch-demo">观看演示</a>
+                    <a href="#ppt-demo" class="product-btn product-btn-secondary" data-text="obox-watch-demo">观看演示</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- PPT演示区域 - 新增 -->
+        <section id="ppt-demo" class="ppt-showcase">
+            <div class="container">
+                <h2 data-text="obox-ppt-title">快速了解 OBox MyCloud</h2>
+                <p data-text="obox-ppt-subtitle">通过演示文稿了解如何轻松搭建您的私人VPN</p>
+                <div class="ppt-embed-wrapper">
+                    <div class="ppt-embed">
+                        <iframe src="https://docs.google.com/presentation/d/1Z6PIowXbQI3BvItYpYR6R6I3cFC4EfhesveJFl71wes/embed?start=false&loop=false&delayms=3000" 
+                                allowfullscreen="true" 
+                                mozallowfullscreen="true" 
+                                webkitallowfullscreen="true">
+                        </iframe>
+                    </div>
                 </div>
             </div>
         </section>
@@ -91,24 +169,6 @@
                         <h4 data-text="obox-screenshot3-title">配置分享</h4>
                         <p data-text="obox-screenshot3-desc">支持多种VPN客户端，一键分享给家人朋友</p>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 视频演示区域 -->
-        <section id="video" class="product-video">
-            <div class="container">
-                <h2 class="section-title" data-text="obox-video-demo-title">视频演示</h2>
-                <p data-text="obox-video-demo-desc">观看完整的设置教程，了解如何在10分钟内创建您的私人VPN</p>
-                <div class="video-container">
-                    <!-- YouTube视频嵌入 - 替换YOUR_VIDEO_ID为实际的YouTube视频ID -->
-                    <iframe 
-                        src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
-                        title="OBox MyCloud 使用教程" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                    </iframe>
                 </div>
             </div>
         </section>
@@ -199,16 +259,12 @@
         </section>
     </main>
 
-    <!-- 🆕 动态加载的footer组件 -->
     <div id="footer-placeholder"></div>
 
-    <!-- 按顺序加载配置文件 -->
     <script src="config/company.js"></script>
     <script src="config/languages/zh-CN.js"></script>
     <script src="config/languages/en-US.js"></script>
-    <!-- 🆕 加载组件加载器 -->
     <script src="js/components.js"></script>
-    <!-- 最后加载主逻辑 -->
     <script src="js/script.js"></script>
 </body>
 </html>

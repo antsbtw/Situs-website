@@ -237,6 +237,12 @@ window.LANGUAGE_TEXTS['en-US'] = {
     'nav-dashboard': 'Dashboard',
     'nav-settings': 'Settings and Subscription',
     'nav-troubleshooting': 'Troubleshooting',
+
+    'obox-ppt-title': 'Quick Overview of OBox MyCloud',
+    'obox-ppt-subtitle': 'Learn how to easily set up your private VPN',
+    'manual-video-title': 'Video Tutorial',
+    'manual-video-subtitle': 'Follow step-by-step to learn OBox MyCloud',
+    'watch-on-youtube': 'Watch on YouTube',
     
     // App Overview Section
     'overview-title': 'App Overview',

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Privacy Policy for OBox MyCloud - Learn how we collect, use, and protect your data">
-    <title>Privacy Policy - OBox MyCloud | Situs Technologies</title>
+    <meta name="description" content="Privacy Policy for OBox MyCloud and OTun-M - Learn how we collect, use, and protect your data">
+    <title>Privacy Policy - OBox MyCloud & OTun-M | Situs Technologies</title>
     
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
@@ -71,6 +71,48 @@
             font-size: 1em;
             font-style: italic;
         }
+
+        .app-scope {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .app-scope h2 {
+            color: white !important;
+            border: none !important;
+            margin-top: 0 !important;
+            padding-bottom: 0 !important;
+            font-size: 1.5em;
+        }
+
+        .app-scope p {
+            color: rgba(255,255,255,0.95);
+            margin-bottom: 10px;
+        }
+
+        .app-scope ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 15px;
+        }
+
+        .app-scope li {
+            color: white;
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .app-scope li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            color: #4ade80;
+        }
         
         .legal-content h2 {
             color: #2c3e50;
@@ -115,6 +157,36 @@
 
         .highlight-box h3 {
             margin-top: 0;
+        }
+
+        .vpn-privacy-box {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            border-left: 4px solid #667eea;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+
+        .vpn-privacy-box h3 {
+            margin-top: 0;
+            color: #667eea;
+        }
+
+        .privacy-guarantee {
+            background-color: #d1fae5;
+            border-left: 4px solid #10b981;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+
+        .privacy-guarantee h3 {
+            margin-top: 0;
+            color: #047857;
+        }
+
+        .privacy-guarantee strong {
+            color: #047857;
         }
         
         .contact-section {
@@ -191,7 +263,16 @@
         </div>
 
         <div class="legal-content">
-            <p>This privacy policy applies to the <strong>OBox MyCloud</strong> app (hereby referred to as "Application") for mobile devices that was created by <strong>Situs Technologies LLC</strong> (hereby referred to as "Service Provider") as a Freemium service.</p>
+            <!-- Applicable Applications Section -->
+            <div class="app-scope">
+                <h2>Applicable Applications</h2>
+                <p>This privacy policy applies to the following applications developed by <strong>Situs Technologies LLC</strong> (hereby referred to as "Service Provider"):</p>
+                <ul>
+                    <li><strong>OBox MyCloud</strong> - Self-hosted VPN server management application</li>
+                    <li><strong>OTun-M</strong> - Private encrypted network client application</li>
+                </ul>
+                <p style="margin-top: 15px;">Both applications are provided as Freemium services for mobile devices.</p>
+            </div>
 
             <h2>1. Information We Collect</h2>
             
@@ -203,11 +284,11 @@
                 <li>Password (encrypted)</li>
             </ul>
 
-            <h3>Cloud Provider Credentials</h3>
+            <h3>Cloud Provider Credentials (OBox MyCloud only)</h3>
             <ul>
                 <li>API keys and access tokens for cloud providers (DigitalOcean, AWS, etc.)</li>
                 <li>These credentials are stored securely on your device using iOS Keychain</li>
-                <li>We do NOT have access to or store these credentials on our servers</li>
+                <li><strong>We do NOT have access to or store these credentials on our servers</strong></li>
             </ul>
 
             <h3>Payment Information</h3>
@@ -221,7 +302,7 @@
             <ul>
                 <li>Device type and operating system version</li>
                 <li>App version and crash reports (for debugging purposes)</li>
-                <li>We do NOT collect browsing history or VPN usage data</li>
+                <li><strong>We do NOT collect browsing history or VPN usage data</strong></li>
             </ul>
 
             <h2>2. How We Use Your Information</h2>
@@ -238,7 +319,8 @@
             
             <h3>Local Storage</h3>
             <ul>
-                <li>Cloud provider API credentials are stored locally on your device using iOS Keychain</li>
+                <li>Cloud provider API credentials (OBox MyCloud) are stored locally on your device using iOS Keychain</li>
+                <li>VPN configuration data (OTun-M) is stored locally on your device</li>
                 <li>We employ industry-standard encryption to protect your data</li>
             </ul>
 
@@ -246,22 +328,74 @@
             <ul>
                 <li>Only basic account information (email, username) is stored on our servers</li>
                 <li>We use secure, encrypted connections (HTTPS/TLS)</li>
+                <li><strong>No VPN connection data or logs are stored on our servers</strong></li>
             </ul>
+
+            <div class="privacy-guarantee">
+                <h3>🔒 Our Privacy Guarantee</h3>
+                <p><strong>Zero Knowledge Architecture:</strong> Your VPN traffic and browsing activity are completely private. We have designed our system so that we cannot see your network activity even if we wanted to.</p>
+            </div>
 
             <div class="highlight-box">
                 <h3>4. What We DON'T Collect</h3>
+                <p><strong>For ALL Applications:</strong></p>
                 <ul>
-                    <li>VPN connection logs or browsing history</li>
-                    <li>User traffic or data passing through VPN servers</li>
-                    <li>Location data</li>
+                    <li>Location data or GPS coordinates</li>
                     <li>Contacts or photo library access</li>
-                    <li>Any data from your deployed VPN servers</li>
+                    <li>Microphone or camera access (except for QR code scanning in OTun-M)</li>
+                    <li>Social media account information</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>VPN-Related (OBox MyCloud & OTun-M):</strong></p>
+                <ul>
+                    <li>VPN connection logs or timestamps</li>
+                    <li>Browsing history or visited websites</li>
+                    <li>User traffic or data passing through VPN tunnels</li>
+                    <li>DNS queries or IP addresses accessed</li>
+                    <li>Bandwidth usage or connection duration</li>
+                    <li>Any data from your self-hosted VPN servers</li>
+                </ul>
+            </div>
+
+            <!-- OTun-M Specific Privacy Section -->
+            <div class="vpn-privacy-box">
+                <h3>OTun-M Specific Privacy Information</h3>
+                
+                <p><strong>VPN Connection Data</strong></p>
+                <ul>
+                    <li>We do <strong>NOT</strong> log VPN connection history or session data</li>
+                    <li>We do <strong>NOT</strong> monitor or store traffic passing through VPN tunnels</li>
+                    <li>We do <strong>NOT</strong> track browsing activity, visited websites, or online behavior</li>
+                    <li>Connection metadata (timestamps, data usage, IP addresses) is <strong>NOT</strong> collected or stored</li>
+                    <li>All VPN traffic is routed through <strong>YOUR</strong> self-hosted server, not our infrastructure</li>
+                </ul>
+
+                <p style="margin-top: 15px;"><strong>Imported Configuration</strong></p>
+                <ul>
+                    <li>Encrypted connection links and QR codes are processed locally on your device only</li>
+                    <li>Decryption passwords are never transmitted to our servers</li>
+                    <li>VPN server credentials (VLESS, Shadowsocks, etc.) remain on your device and are never uploaded</li>
+                    <li>Server addresses and port numbers are stored locally in iOS Keychain</li>
+                </ul>
+
+                <p style="margin-top: 15px;"><strong>Network Activity</strong></p>
+                <ul>
+                    <li>All network traffic is end-to-end encrypted between your device and your self-hosted server</li>
+                    <li>We have <strong>zero visibility</strong> into your network activity or data</li>
+                    <li>No third-party VPN providers or intermediary services are involved</li>
+                    <li>You maintain complete control over your VPN server and all data passing through it</li>
+                </ul>
+
+                <p style="margin-top: 15px;"><strong>Camera Access (QR Code Scanning Only)</strong></p>
+                <ul>
+                    <li>OTun-M requests camera access solely for scanning encrypted QR codes</li>
+                    <li>Camera data is processed locally and never transmitted or stored</li>
+                    <li>You can deny camera access and still use the app by manually entering connection links</li>
                 </ul>
             </div>
 
             <h2>5. Third-Party Services</h2>
             
-            <h3>Cloud Providers</h3>
+            <h3>Cloud Providers (OBox MyCloud)</h3>
             <ul>
                 <li>The Application connects to DigitalOcean, AWS, and other cloud providers using YOUR API credentials</li>
                 <li>We do not share your credentials with any third parties</li>
@@ -272,6 +406,7 @@
             <ul>
                 <li>We may use anonymous analytics to understand app usage patterns</li>
                 <li>No personally identifiable information is included in analytics data</li>
+                <li>VPN connection data is <strong>never</strong> included in analytics</li>
             </ul>
 
             <h2>6. Data Sharing</h2>
@@ -282,6 +417,7 @@
                 <li>To comply with legal obligations or court orders</li>
                 <li>To protect our rights, privacy, safety, or property</li>
             </ul>
+            <p><strong>Important:</strong> Even under legal compulsion, we cannot provide VPN traffic data or browsing history because we do not collect or store this information.</p>
 
             <h2>7. Your Rights and Choices</h2>
             <p>You have the right to:</p>
@@ -295,11 +431,12 @@
             <p>To exercise these rights, contact us at <a href="mailto:service@situstechnologies.com">service@situstechnologies.com</a></p>
 
             <h2>8. Children's Privacy</h2>
-            <p>The Application is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided personal information, please contact us.</p>
-            <p><strong>You must be at least 16 years of age</strong> (or the age of legal consent in your country) to use this Application.</p>
+            <p>Our Applications are not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided personal information, please contact us immediately.</p>
+            <p><strong>You must be at least 16 years of age</strong> (or the age of legal consent in your country) to use these Applications.</p>
 
             <h2>9. International Data Transfers</h2>
             <p>Your information may be transferred to and processed in countries other than your own. We ensure appropriate safeguards are in place to protect your data in accordance with this Privacy Policy.</p>
+            <p><strong>Note:</strong> When using OTun-M, your VPN traffic is routed through your self-hosted server, which you control and deploy in a location of your choice.</p>
 
             <h2>10. Data Retention</h2>
             <p>We retain your personal information only for as long as necessary to:</p>
@@ -309,23 +446,25 @@
                 <li>Resolve disputes</li>
             </ul>
             <p>When you delete your account, we will delete or anonymize your personal information within 30 days.</p>
+            <p><strong>Local Data:</strong> Configuration data stored locally on your device (VPN credentials, server addresses, etc.) remains on your device until you manually delete it or uninstall the application.</p>
 
             <h2>11. Changes to This Privacy Policy</h2>
             <p>We may update this Privacy Policy from time to time. We will notify you of significant changes by:</p>
             <ul>
-                <li>Posting the new Privacy Policy in the Application</li>
+                <li>Posting the new Privacy Policy in the Applications</li>
                 <li>Sending an email notification (if you have an account)</li>
                 <li>Updating the "Last Updated" date</li>
             </ul>
-            <p>Your continued use of the Application after changes constitutes acceptance of the updated Privacy Policy.</p>
+            <p>Your continued use of the Applications after changes constitutes acceptance of the updated Privacy Policy.</p>
 
             <h2>12. California Privacy Rights (CCPA)</h2>
             <p>If you are a California resident, you have additional rights under the California Consumer Privacy Act, including the right to:</p>
             <ul>
                 <li>Know what personal information is collected</li>
                 <li>Request deletion of personal information</li>
-                <li>Opt-out of the sale of personal information (Note: We do not sell personal information)</li>
+                <li>Opt-out of the sale of personal information</li>
             </ul>
+            <p><strong>Note:</strong> We do not sell personal information, and we do not collect VPN usage data.</p>
 
             <h2>13. European Privacy Rights (GDPR)</h2>
             <p>If you are in the European Economic Area, you have rights under the General Data Protection Regulation, including:</p>
@@ -336,20 +475,35 @@
                 <li>Right to data portability</li>
                 <li>Right to object to processing</li>
             </ul>
+            <p><strong>Legal Basis for Processing:</strong> We process your personal data based on your consent, contract performance, and our legitimate interests in providing and improving our services.</p>
+
+            <h2>14. Security Measures</h2>
+            <p>We implement comprehensive security measures to protect your data:</p>
+            <ul>
+                <li><strong>Encryption:</strong> All data transmission uses TLS/SSL encryption</li>
+                <li><strong>iOS Keychain:</strong> Sensitive credentials are stored using Apple's secure Keychain</li>
+                <li><strong>End-to-End Encryption:</strong> VPN traffic is encrypted from your device to your self-hosted server</li>
+                <li><strong>No Central Storage:</strong> VPN configuration and credentials are never stored on our servers</li>
+                <li><strong>Regular Security Audits:</strong> We regularly review and update our security practices</li>
+            </ul>
 
             <div class="contact-section">
-                <h3>14. Contact Us</h3>
+                <h3>15. Contact Us</h3>
                 <p>If you have questions or concerns about this Privacy Policy or our data practices:</p>
                 <p><strong>Email:</strong> <a href="mailto:service@situstechnologies.com">service@situstechnologies.com</a><br>
                 <strong>Website:</strong> <a href="https://situstechnologies.com">https://situstechnologies.com</a><br>
                 <strong>Data Protection Inquiries:</strong> <a href="mailto:privacy@situstechnologies.com">privacy@situstechnologies.com</a></p>
+                <p style="margin-top: 15px;"><strong>Mailing Address:</strong><br>
+                Situs Technologies LLC<br>
+                [Your Business Address]<br>
+                United States</p>
             </div>
 
-            <h2>15. Your Consent</h2>
-            <p>By using the Application, you consent to the collection and use of information as described in this Privacy Policy.</p>
+            <h2>16. Your Consent</h2>
+            <p>By using the Applications, you consent to the collection and use of information as described in this Privacy Policy. For OTun-M specifically, by connecting to your self-hosted VPN server, you acknowledge that your network traffic will be routed through your own infrastructure, which you control independently.</p>
 
             <p style="text-align: center; margin-top: 50px; padding-top: 30px; border-top: 2px solid #e0e0e0; color: #888;">
-                <em>This privacy policy is effective as of January 1, 2025.</em>
+                <em>This privacy policy is effective as of January 1, 2025 and applies to both OBox MyCloud and OTun-M applications.</em>
             </p>
         </div>
     </main>

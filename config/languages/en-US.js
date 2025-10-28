@@ -470,6 +470,16 @@ window.LANGUAGE_TEXTS['en-US'] = {
     'screenshot-placeholder-sharing': 'Configuration sharing interface screenshot placeholder',
     'screenshot-placeholder-server-list': 'VPN server list interface screenshot placeholder',
     'screenshot-placeholder-settings': 'Settings page screenshot placeholder',
+
+    'otun-name': 'OTun-M',
+    'otun-tagline': 'Your Private Encrypted Network Guardian',
+    'otun-description': 'Paired with OBox MyCloud self-hosted server: one-tap import, fully private tunnel in 10 minutes. No tech skills required. Scan an encrypted QR code or paste a secure link to create an end-to-end encrypted tunnel—accessible only to you and invited members. Zero logs, zero sharing, full data control.',
+    'otun-feature-1': 'One-Tap Import - Scan encrypted QR code or paste link, connected in 30 seconds',
+    'otun-feature-2': 'Native Advanced Protocols - VLESS + Reality and Shadowsocks cores, immune to deep inspection',
+    'otun-feature-3': 'Smart Split Tunneling - Auto-detects traffic, encrypts only what\'s needed, keeps local apps instant',
+    'otun-feature-4': 'Full Traffic Encryption - Toggle global protection for secure remote work and public WiFi',
+    'otun-learn-more': 'Learn More',
+    'otun-testflight': 'TestFlight Beta'
     
     // Manual Conclusion
     'manual-conclusion': 'This user manual covers the core functionality of OBox MyCloud. For advanced features or specific technical issues, please consult the in-app help system or contact technical support.'

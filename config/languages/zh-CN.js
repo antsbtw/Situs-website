@@ -473,7 +473,18 @@ window.LANGUAGE_TEXTS['zh-CN'] = {
     'screenshot-placeholder-settings': '设置页面截图占位符',
     
     // 手册结语
-    'manual-conclusion': '本操作手册涵盖OBox MyCloud的核心功能。如需高级功能或特定技术问题，请查阅应用内帮助系统或联系技术支持。'
+    'manual-conclusion': '本操作手册涵盖OBox MyCloud的核心功能。如需高级功能或特定技术问题，请查阅应用内帮助系统或联系技术支持。',  // ← 加上逗号
+
+    // OTun-M 产品信息
+    'otun-name': 'OTun-M',
+    'otun-tagline': '您的私人加密网络守护者',
+    'otun-description': '配合OBox MyCloud自建服务器：一键导入，10分钟内建立完全私密的加密隧道。无需技术背景，扫码或粘贴链接即可创建端到端加密连接——只有您和受邀成员可访问。零日志、零分享、完全数据自主。',
+    'otun-feature-1': '一键导入 - 扫描加密二维码或粘贴链接，30秒完成配置',
+    'otun-feature-2': '原生高级协议 - VLESS + Reality 和 Shadowsocks 核心，免疫深度检测',
+    'otun-feature-3': '智能分流 - 自动检测流量，只加密需要的，保持本地应用秒开',
+    'otun-feature-4': '全流量加密 - 一键开启全局保护，远程办公和公共WiFi全面安全',
+    'otun-learn-more': '了解详情',
+    'otun-testflight': 'TestFlight 测试'
 };
 
 console.log('🇨🇳 中文语言包已加载 (统一扁平化结构)');

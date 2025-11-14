@@ -167,12 +167,12 @@ window.LANGUAGE_TEXTS['zh-CN'] = {
     
     // 应用截图
     'obox-app-screenshots': '应用截图',
-    'obox-screenshot1-title': '主界面',
-    'obox-screenshot1-desc': '简洁直观的主控制界面',
-    'obox-screenshot2-title': '服务器列表',
-    'obox-screenshot2-desc': '全球服务器节点一览',
-    'obox-screenshot3-title': '设置页面',
-    'obox-screenshot3-desc': '个性化配置选项',
+    'obox-screenshot1-title': '选择云服务商',
+    'obox-screenshot1-desc': '支持DigitalOcean、Google Cloud、AWS等主流云服务',
+    'obox-screenshot2-title': 'API身份认证',
+    'obox-screenshot2-desc': '安全的API访问，保护您的云账户',
+    'obox-screenshot3-title': '配置分享',
+    'obox-screenshot3-desc': '支持多种VPN客户端，一键分享给家人朋友',
     
     // 视频演示
     'obox-video-demo-title': '产品演示视频',

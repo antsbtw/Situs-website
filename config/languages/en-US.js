@@ -166,12 +166,12 @@ window.LANGUAGE_TEXTS['en-US'] = {
     
     // App Screenshots
     'obox-app-screenshots': 'App Screenshots',
-    'obox-screenshot1-title': 'Main Interface',
-    'obox-screenshot1-desc': 'Clean and intuitive main control interface',
-    'obox-screenshot2-title': 'Server List',
-    'obox-screenshot2-desc': 'Global server nodes overview',
-    'obox-screenshot3-title': 'Settings Page',
-    'obox-screenshot3-desc': 'Personalized configuration options',
+    'obox-screenshot1-title': 'Choose Cloud Provider',
+    'obox-screenshot1-desc': 'Supports DigitalOcean, Google Cloud, AWS and other major clouds',
+    'obox-screenshot2-title': 'API Authentication',
+    'obox-screenshot2-desc': 'Secure API access keeps your cloud accounts protected',
+    'obox-screenshot3-title': 'Configuration Sharing',
+    'obox-screenshot3-desc': 'Share VPN profiles to multiple clients in one tap',
     
     // Video Demo
     'obox-video-demo-title': 'Product Demo Video',

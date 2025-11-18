@@ -76,6 +76,15 @@
             }
         }
 
+        .locale-section {
+            margin-bottom: 60px;
+        }
+
+        .locale-section + .locale-section {
+            border-top: 1px solid #eee;
+            padding-top: 60px;
+        }
+
         .plan-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -153,6 +162,7 @@
     <div id="header-placeholder"></div>
 
     <main>
+        <div class="locale-section locale-zh">
         <!-- 产品介绍Hero区域 -->
         <section class="product-hero">
             <div class="container">
@@ -376,6 +386,214 @@
                 </p>
             </div>
         </section>
+        </div>
+
+        <div class="locale-section locale-en">
+            <section class="product-hero">
+                <div class="container">
+                    <h1>OBox MyCloud</h1>
+                    <p class="tagline">Build your private VPN in minutes.</p>
+                    <p class="description">
+                        Deploy Outline on DigitalOcean or AWS with zero coding, unlock secure global access, and keep every byte under your control.
+                    </p>
+                    <div class="product-cta-buttons">
+                        <a href="#download-en" class="product-btn product-btn-primary">Download Now</a>
+                        <a href="#ppt-demo-en" class="product-btn product-btn-secondary">Watch Demo</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ppt-demo-en" class="ppt-showcase">
+                <div class="container">
+                    <h2>Quick Tour</h2>
+                    <p>Walk through how OBox MyCloud spins up your personal VPN step by step.</p>
+                    <div class="ppt-embed-wrapper">
+                        <div class="ppt-embed">
+                            <iframe src="https://docs.google.com/presentation/d/1Z6PIowXbQI3BvItYpYR6R6I3cFC4EfhesveJFl71wes/embed?start=false&loop=false&delayms=3000"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="product-features">
+                <div class="container">
+                    <h2 class="section-title">Why Teams Love OBox</h2>
+                    <div class="product-features-grid">
+                        <div class="product-feature-card">
+                            <div class="product-feature-icon">🚀</div>
+                            <h3>Quick Setup</h3>
+                            <p>Create a full VPN stack in ten minutes without scripts.</p>
+                        </div>
+                        <div class="product-feature-card">
+                            <div class="product-feature-icon">🔒</div>
+                            <h3>Total Privacy</h3>
+                            <p>Your data stays on your server—no third-party middlemen.</p>
+                        </div>
+                        <div class="product-feature-card">
+                            <div class="product-feature-icon">🌍</div>
+                            <h3>Global Access</h3>
+                            <p>Stream, work, and browse from 60+ global regions.</p>
+                        </div>
+                        <div class="product-feature-card">
+                            <div class="product-feature-icon">⚡</div>
+                            <h3>Easy Control</h3>
+                            <p>Manage servers and users with an intuitive dashboard.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="product-screenshots">
+                <div class="container">
+                    <h2 class="section-title">Product Screens</h2>
+                    <div class="screenshots-grid">
+                        <div class="screenshot-item">
+                            <img src="images/Cloud.jpg" alt="Choose Provider">
+                            <h4>Choose Provider</h4>
+                            <p>Select from DigitalOcean, Google Cloud, AWS, and more.</p>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="images/obox-screenshot2.png" alt="API Auth">
+                            <h4>Secure API Auth</h4>
+                            <p>Connect safely with token-based authentication.</p>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="images/ShareVPN.png" alt="Share Access">
+                            <h4>Share Access</h4>
+                            <p>Distribute encrypted configs to every device instantly.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="product-tech-features">
+                <div class="container">
+                    <h2 class="section-title">Key Capabilities</h2>
+                    <div class="tech-grid">
+                        <div class="tech-card">
+                            <h4>Multi-Cloud</h4>
+                            <ul class="tech-list">
+                                <li>DigitalOcean Droplet</li>
+                                <li>Google Cloud VPS</li>
+                                <li>AWS EC2</li>
+                                <li>More providers coming</li>
+                            </ul>
+                        </div>
+                        <div class="tech-card">
+                            <h4>Client Support</h4>
+                            <ul class="tech-list">
+                                <li>Outline — stable & simple</li>
+                                <li>MyVPN — encrypted configs</li>
+                                <li>sing-box — censorship resistant</li>
+                                <li>Automatic profile selection</li>
+                            </ul>
+                        </div>
+                        <div class="tech-card">
+                            <h4>User Management</h4>
+                            <ul class="tech-list">
+                                <li>Data quota limits</li>
+                                <li>Schedule-based access</li>
+                                <li>Private invitation links</li>
+                                <li>Real-time usage monitoring</li>
+                            </ul>
+                        </div>
+                        <div class="tech-card">
+                            <h4>Security</h4>
+                            <ul class="tech-list">
+                                <li>End-to-end encryption</li>
+                                <li>Complete data ownership</li>
+                                <li>No logging</li>
+                                <li>Privacy-first architecture</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">Who It’s For</h2>
+                    <div class="features">
+                        <div class="feature-card">
+                            <div class="feature-icon">👤</div>
+                            <h3>Individuals</h3>
+                            <p>Own a personal VPN tunnel for streaming and browsing.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">👥</div>
+                            <h3>Small Teams</h3>
+                            <p>Provide secure remote access to distributed teammates.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">👨‍👩‍👧‍👦</div>
+                            <h3>Families</h3>
+                            <p>Share a private encrypted network with those you trust.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section obox-subscriptions">
+                <div class="container">
+                    <h2 class="section-title">Subscription Plans</h2>
+                    <p>Preview and upgrade plans directly inside the app with StoreKit checkout.</p>
+                    <div class="plan-grid">
+                        <div class="plan-card">
+                            <h3>Basic Plan</h3>
+                            <div class="plan-price">$5 / month</div>
+                            <div class="plan-users">Up to 50 members</div>
+                            <ul>
+                                <li>All core deployment workflows</li>
+                                <li>One-tap import of managed assets</li>
+                                <li>Create unlimited servers</li>
+                            </ul>
+                            <a href="#download-en">Choose Basic</a>
+                        </div>
+                        <div class="plan-card recommended">
+                            <span class="plan-badge">Recommended</span>
+                            <h3>Premium Plan</h3>
+                            <div class="plan-price">$10 / month</div>
+                            <div class="plan-users">Up to 200 members</div>
+                            <ul>
+                                <li>Ideal for families & teams</li>
+                                <li>Advanced monitoring & alerts</li>
+                                <li>Priority tunnel health notifications</li>
+                            </ul>
+                            <a href="#download-en">Upgrade to Premium</a>
+                        </div>
+                        <div class="plan-card">
+                            <h3>Unlimited Plan</h3>
+                            <div class="plan-price">$15 / month</div>
+                            <div class="plan-users">Unlimited members</div>
+                            <ul>
+                                <li>Unlimited invites & analytics</li>
+                                <li>Automation & auditing suite</li>
+                                <li>Dedicated support channel</li>
+                            </ul>
+                            <a href="#download-en">Upgrade to Unlimited</a>
+                        </div>
+                    </div>
+                    <p class="section-note">
+                        All plans bill through StoreKit so you can review, upgrade, or downgrade anytime from the OBox MyCloud home screen.
+                    </p>
+                </div>
+            </section>
+
+            <section id="download-en" class="product-download">
+                <div class="container">
+                    <h2 class="section-title">Download & Get Started</h2>
+                    <p>Grab OBox MyCloud from your preferred store or install directly.</p>
+                    <div class="download-buttons">
+                        <a href="https://apps.apple.com/us/app/obox-mycloud/id6754077037" class="store-button">Download on App Store</a>
+                        <a href="#" class="store-button">Download on Google Play</a>
+                        <a href="#" class="store-button">Direct APK Download</a>
+                    </div>
+                    <p style="margin-top: 30px;">
+                        Need help? Email <a href="mailto:service@situstechnologies.com" style="color:#ffd700;">service@situstechnologies.com</a>
+                    </p>
+                </div>
+            </section>
+        </div>
     </main>
 
     <div id="footer-placeholder"></div>

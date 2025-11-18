@@ -75,6 +75,78 @@
                 font-size: 1em;
             }
         }
+
+        .plan-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .plan-card {
+            background: white;
+            border-radius: 18px;
+            padding: 30px 25px;
+            text-align: center;
+            border: 1px solid rgba(17, 29, 74, 0.1);
+            box-shadow: 0 15px 35px rgba(17, 29, 74, 0.1);
+            position: relative;
+        }
+
+        .plan-card.recommended {
+            border: 2px solid #667eea;
+        }
+
+        .plan-badge {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #667eea;
+            color: white;
+            font-size: 0.85rem;
+            padding: 4px 12px;
+            border-radius: 999px;
+            letter-spacing: 0.04em;
+        }
+
+        .plan-price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #667eea;
+            margin: 15px 0;
+        }
+
+        .plan-users {
+            color: #6c7a99;
+            margin-bottom: 20px;
+        }
+
+        .plan-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px;
+        }
+
+        .plan-card li {
+            padding: 6px 0;
+            font-size: 0.95rem;
+            color: #4a587a;
+        }
+
+        .plan-card a {
+            display: inline-block;
+            padding: 10px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+
+        .plan-card.recommended a {
+            background: linear-gradient(120deg, #667eea, #764ba2);
+        }
     </style>
 </head>
 <body>
@@ -239,6 +311,53 @@
                         <p data-text="obox-audience-families-desc">想与家人或朋友分享私人网络的用户</p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- 订阅方案 -->
+        <section class="section obox-subscriptions">
+            <div class="container">
+                <h2 class="section-title" data-text="obox-plan-title">订阅方案</h2>
+                <p data-text="obox-plan-desc">OBox MyCloud 集成 StoreKit，可在主界面直接查看和购买套餐，未登录即可预览，登录后随时升级。</p>
+                <div class="plan-grid">
+                    <div class="plan-card">
+                        <h3 data-text="obox-plan-basic-title">基础套餐</h3>
+                        <div class="plan-price" data-text="obox-plan-basic-price">每月 $5</div>
+                        <div class="plan-users" data-text="obox-plan-basic-users">最多 50 名成员</div>
+                        <ul>
+                            <li data-text="obox-plan-basic-feature1">全部核心部署流程</li>
+                            <li data-text="obox-plan-basic-feature2">一键导入 OBox 管理资产</li>
+                            <li data-text="obox-plan-basic-feature3">可创建无限台服务器</li>
+                        </ul>
+                        <a href="#download" data-text="obox-plan-basic-cta">选择基础套餐</a>
+                    </div>
+                    <div class="plan-card recommended">
+                        <span class="plan-badge" data-text="obox-plan-badge">推荐</span>
+                        <h3 data-text="obox-plan-premium-title">高级套餐</h3>
+                        <div class="plan-price" data-text="obox-plan-premium-price">每月 $10</div>
+                        <div class="plan-users" data-text="obox-plan-premium-users">最多 200 名成员</div>
+                        <ul>
+                            <li data-text="obox-plan-premium-feature1">家庭 / 小团队使用首选</li>
+                            <li data-text="obox-plan-premium-feature2">高级监控与告警策略</li>
+                            <li data-text="obox-plan-premium-feature3">隧道健康优先提醒</li>
+                        </ul>
+                        <a href="#download" data-text="obox-plan-premium-cta">升级到高级套餐</a>
+                    </div>
+                    <div class="plan-card">
+                        <h3 data-text="obox-plan-unlimited-title">无限套餐</h3>
+                        <div class="plan-price" data-text="obox-plan-unlimited-price">每月 $15</div>
+                        <div class="plan-users" data-text="obox-plan-unlimited-users">成员不限</div>
+                        <ul>
+                            <li data-text="obox-plan-unlimited-feature1">无限成员与访问统计</li>
+                            <li data-text="obox-plan-unlimited-feature2">全局自动化与审计</li>
+                            <li data-text="obox-plan-unlimited-feature3">专属技术支持通道</li>
+                        </ul>
+                        <a href="#download" data-text="obox-plan-unlimited-cta">升级到无限套餐</a>
+                    </div>
+                </div>
+                <p class="section-note" data-text="obox-plan-note">
+                    所有订阅均通过 StoreKit 安全结账，可在 OBox MyCloud 主界面随时查看、升级或降级。
+                </p>
             </div>
         </section>
 

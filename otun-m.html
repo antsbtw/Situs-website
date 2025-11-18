@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OTun-M – 自建 VLESS+Reality 客户端，全家共享的私有加密网络守护者。">
+    <meta name="keywords" content="OTun-M,OBox,VPN,VLESS,Reality,自建VPN,私有网络">
+    <title>OTun-M | 自建 VLESS+Reality 客户端</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <style>
+        .product-hero.otun-hero {
+            background: linear-gradient(120deg, #111d4a 0%, #147ad6 40%, #05d1f5 100%);
+        }
+
+        .product-hero .hero-badges {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+
+        .product-hero .hero-badge {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 8px 18px;
+            border-radius: 999px;
+            font-size: 0.95rem;
+        }
+
+        .otun-highlight {
+            background: rgba(20, 122, 214, 0.08);
+            border: 1px solid rgba(20, 122, 214, 0.3);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 25px auto 0;
+            max-width: 850px;
+        }
+
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .feature-list li {
+            list-style: none;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid #eef2ff;
+        }
+
+        .feature-list strong {
+            display: block;
+            font-size: 1.1rem;
+            color: #111d4a;
+            margin-bottom: 10px;
+        }
+
+        .plan-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .plan-card {
+            background: white;
+            border-radius: 18px;
+            padding: 30px 25px;
+            text-align: center;
+            border: 1px solid rgba(17, 29, 74, 0.1);
+            box-shadow: 0 15px 35px rgba(17, 29, 74, 0.1);
+        }
+
+        .plan-card.recommended {
+            border: 2px solid #147ad6;
+            position: relative;
+        }
+
+        .plan-badge {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #147ad6;
+            color: white;
+            font-size: 0.85rem;
+            padding: 4px 12px;
+            border-radius: 999px;
+            letter-spacing: 0.04em;
+        }
+
+        .plan-price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #147ad6;
+            margin: 15px 0;
+        }
+
+        .plan-users {
+            color: #6c7a99;
+            margin-bottom: 20px;
+        }
+
+        .plan-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px;
+        }
+
+        .plan-card li {
+            padding: 6px 0;
+            font-size: 0.95rem;
+            color: #4a587a;
+        }
+
+        .plan-card a {
+            display: inline-block;
+            padding: 10px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            background: #147ad6;
+            color: white;
+            font-weight: 600;
+        }
+
+        .plan-card.recommended a {
+            background: linear-gradient(120deg, #147ad6, #05d1f5);
+        }
+
+        .two-column-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .two-column-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .two-column-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            color: #2c3e50;
+        }
+
+        .two-column-list li:last-child {
+            border-bottom: none;
+        }
+
+        .two-column-list strong {
+            color: #111d4a;
+        }
+
+        .section-note {
+            margin-top: 35px;
+            font-size: 0.95rem;
+            color: #657086;
+        }
+
+        .sharing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .sharing-card {
+            background: white;
+            border-radius: 18px;
+            padding: 25px;
+            box-shadow: 0 15px 40px rgba(17, 29, 74, 0.08);
+            border: 1px solid rgba(17, 29, 74, 0.08);
+            text-align: center;
+        }
+
+        .sharing-card .emoji {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .smart-routing {
+            background: #0d152e;
+            color: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 35px;
+        }
+
+        .smart-routing h3 {
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        .smart-routing p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .smart-routing ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .smart-routing li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 24px;
+        }
+
+        .smart-routing li::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #05d1f5;
+            position: absolute;
+            left: 0;
+            top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .product-hero .hero-badges {
+                flex-direction: column;
+            }
+
+            .smart-routing {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="product-hero otun-hero">
+            <div class="container">
+                <div class="hero-badges">
+                    <span class="hero-badge" data-text="otun-hero-free">100% 免费伴侣应用</span>
+                    <span class="hero-badge" data-text="otun-hero-protocol">原生支持 VLESS + Reality + Shadowsocks</span>
+                    <span class="hero-badge" data-text="otun-hero-selfhosted">自建安全 · 私人掌控</span>
+                </div>
+                <h1 data-text="otun-name-hero">OTun-M —— 您的专属加密网络卫士</h1>
+                <p class="tagline" data-text="otun-tagline-hero">搭配 OBox MyCloud 自建服务器，一键导入，10 分钟拥有完全私密的网络通道。</p>
+                <p class="description" data-text="otun-description-hero">
+                    无需技术门槛。通过 OBox MyCloud 快速部署私有云服务器，再用 OTun-M 扫描加密二维码或粘贴安全链接，即可建立仅供您和受邀成员访问的 Reality 加固 VLESS 隧道，零日志、零共享，数据全程由您掌控。
+                </p>
+                <div class="product-cta-buttons">
+                    <a href="#download" class="product-btn product-btn-primary" data-text="otun-download-cta">立即下载 OTun-M</a>
+                    <a href="testFlightCredentials.html" class="product-btn product-btn-secondary" data-text="otun-testflight-cta">加入 TestFlight 测试</a>
+                </div>
+                <div class="otun-highlight" data-text="otun-highlight-text">
+                    OTun-M 是 OBox MyCloud 的免费伴侣应用。10 分钟部署私有 VPN 服务器，用加密邀请分享给家人或团队，并凭借 sing-box 内核轻松避开 DPI 侦测。
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <a href="products.html" class="back-btn" data-text="back-to-products">← 返回产品页面</a>
+            </div>
+        </section>
+
+        <section class="product-features">
+            <div class="container">
+                <h2 class="section-title" data-text="otun-key-features-title">核心亮点</h2>
+                <div class="product-features-grid">
+                    <div class="product-feature-card">
+                        <div class="product-feature-icon">⚡</div>
+                        <h3 data-text="otun-feature-import-title">一键导入配置</h3>
+                        <p data-text="otun-feature-import-desc">扫描加密二维码或粘贴安全链接，30 秒即刻上线。</p>
+                    </div>
+                    <div class="product-feature-card">
+                        <div class="product-feature-icon">🛡️</div>
+                        <h3 data-text="otun-feature-protocol-title">原生高级协议</h3>
+                        <p data-text="otun-feature-protocol-desc">sing-box 核心原生支持 VLESS + Reality、Shadowsocks，多协议协同抵御深度检测。</p>
+                    </div>
+                    <div class="product-feature-card">
+                        <div class="product-feature-icon">🧠</div>
+                        <h3 data-text="otun-feature-routing-title">智能分流引擎</h3>
+                        <p data-text="otun-feature-routing-desc">自动识别流量，仅加密必要数据，让本地应用保持丝滑。</p>
+                    </div>
+                    <div class="product-feature-card">
+                        <div class="product-feature-icon">🌐</div>
+                        <h3 data-text="otun-feature-fulltunnel-title">全流量模式</h3>
+                        <p data-text="otun-feature-fulltunnel-desc">一键切换全局代理，所有外出流量强制通过自建服务器，公共 Wi-Fi 更安心。</p>
+                    </div>
+                    <div class="product-feature-card">
+                        <div class="product-feature-icon">👥</div>
+                        <h3 data-text="otun-feature-sharing-title">安全共享</h3>
+                        <p data-text="otun-feature-sharing-desc">通过加密链接邀请成员，并实时查看使用数据，权限随时可控。</p>
+                    </div>
+                    <div class="product-feature-card">
+                        <div class="product-feature-icon">🌎</div>
+                        <h3 data-text="otun-feature-global-title">全球部署</h3>
+                        <p data-text="otun-feature-global-desc">配合 OBox MyCloud 一键部署 DigitalOcean、AWS、Linode 等 60+ 地区。</p>
+                    </div>
+                </div>
+
+                <div class="smart-routing">
+                    <div>
+                        <h3 data-text="otun-smart-routing-title">智能分流工作原理</h3>
+                        <p data-text="otun-smart-routing-desc">
+                            OTun-M 在后台逐个分析请求，自动拆分本地与远程流量，让游戏、观影与企业 SaaS 同步运行且无延迟。
+                        </p>
+                    </div>
+                    <div>
+                        <ul>
+                            <li data-text="otun-smart-routing-point1">自动识别对延迟敏感的应用，保持直连不绕路。</li>
+                            <li data-text="otun-smart-routing-point2">仅加密必须保护的会话，最大化利用带宽。</li>
+                            <li data-text="otun-smart-routing-point3">开启全流量模式后，所有连接立即进入加密隧道。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-screenshots">
+            <div class="container">
+                <h2 class="section-title" data-text="otun-screenshots-title">界面预览</h2>
+                <p data-text="otun-screenshots-desc">展示 OTun-M 与 OBox MyCloud 的配对、隧道管理与订阅页面。</p>
+                <div class="screenshots-grid">
+                    <div class="screenshot-item">
+                        <img src="images/OTun-M/page02.jpg" alt="OTun-M pairing" />
+                        <h4 data-text="otun-screenshot1-title">OBox MyCloud 配对</h4>
+                        <p data-text="otun-screenshot1-desc">扫描服务器二维码，立即同步 VLESS + Reality 配置。</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="images/OTun-M/page03.jpg" alt="OTun-M smart routing" />
+                        <h4 data-text="otun-screenshot2-title">智能分流控制台</h4>
+                        <p data-text="otun-screenshot2-desc">监控分流状态，可随时切换全局代理。</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="images/OTun-M/page04.jpg" alt="OTun-M sharing dashboard" />
+                        <h4 data-text="otun-screenshot3-title">家庭与团队共享</h4>
+                        <p data-text="otun-screenshot3-desc">发送加密邀请，查看实时用量与成员列表。</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="images/OTun-M/page5.jpg" alt="OTun-M subscription plans" />
+                        <h4 data-text="otun-screenshot4-title">订阅中心</h4>
+                        <p data-text="otun-screenshot4-desc">内置 StoreKit 结账，套餐升级一键完成。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-tech-features">
+            <div class="container">
+                <h2 class="section-title" data-text="otun-architecture-title">协议栈与安全能力</h2>
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <h4 data-text="otun-tech-protocol-title">sing-box 高级内核</h4>
+                        <ul class="tech-list">
+                            <li data-text="otun-tech-protocol1">VLESS + Reality，XTLS Vision 加固</li>
+                            <li data-text="otun-tech-protocol2">兼容 Shadowsocks 等传统客户端</li>
+                            <li data-text="otun-tech-protocol3">支持多跳传输与拓展</li>
+                            <li data-text="otun-tech-protocol4">抵御 DPI 检测与限速</li>
+                        </ul>
+                    </div>
+                    <div class="tech-card">
+                        <h4 data-text="otun-tech-security-title">安全与隐私</h4>
+                        <ul class="tech-list">
+                            <li data-text="otun-tech-security1">设备与服务器零日志</li>
+                            <li data-text="otun-tech-security2">配置导入全程端到端加密</li>
+                            <li data-text="otun-tech-security3">按成员统计使用情况</li>
+                            <li data-text="otun-tech-security4">邀请制隧道共享</li>
+                        </ul>
+                    </div>
+                    <div class="tech-card">
+                        <h4 data-text="otun-tech-control-title">控制与自动化</h4>
+                        <ul class="tech-list">
+                            <li data-text="otun-tech-control1">与 OBox MyCloud 资产一键配对</li>
+                            <li data-text="otun-tech-control2">分流预设覆盖观影 / 办公 / 游戏</li>
+                            <li data-text="otun-tech-control3">实时通知隧道健康状况</li>
+                            <li data-text="otun-tech-control4">家庭/团队邀请可设置有效期</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="two-column-list">
+                    <div>
+                        <h3 data-text="otun-selfhosting-title">为什么选择自建</h3>
+                        <ul>
+                            <li data-text="otun-selfhosting1"><strong>数据完全自主</strong> —— 服务器由您掌控。</li>
+                            <li data-text="otun-selfhosting2">远离商用 VPN 的监控与限速。</li>
+                            <li data-text="otun-selfhosting3">一次建站成本，客户端不限量使用。</li>
+                            <li data-text="otun-selfhosting4">可自由选择 DigitalOcean、AWS、Linode 等任意地区。</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 data-text="otun-requirements-title">使用前提</h3>
+                        <ul>
+                            <li data-text="otun-requirements1">OBox MyCloud iOS 应用（可在 App Store 下载）。</li>
+                            <li data-text="otun-requirements2">通过 OBox MyCloud 创建的云服务器。</li>
+                            <li data-text="otun-requirements3">在 iPhone 或 iPad 上安装 OTun-M。</li>
+                            <li data-text="otun-requirements4">可选 TestFlight 版本抢先体验新功能。</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="section-note" data-text="otun-note">
+                    隐私用户、远程办公、家庭共享、小型团队都能在 10 分钟内搭配 OBox MyCloud 完成部署，彻底掌控自己的网络主权。
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title" data-text="otun-perfectfor-title">适用人群</h2>
+                <div class="sharing-grid">
+                    <div class="sharing-card">
+                        <div class="emoji">🧑‍💻</div>
+                        <h3 data-text="otun-audience-privacy">隐私至上用户</h3>
+                        <p data-text="otun-audience-privacy-desc">希望完全掌控加密隧道的个人用户。</p>
+                    </div>
+                    <div class="sharing-card">
+                        <div class="emoji">💼</div>
+                        <h3 data-text="otun-audience-remote">远程办公</h3>
+                        <p data-text="otun-audience-remote-desc">随时访问企业系统的远程工作者。</p>
+                    </div>
+                    <div class="sharing-card">
+                        <div class="emoji">👨‍👩‍👧‍👦</div>
+                        <h3 data-text="otun-audience-family">家庭共享</h3>
+                        <p data-text="otun-audience-family-desc">想与家人共同维护安全网络的家庭。</p>
+                    </div>
+                    <div class="sharing-card">
+                        <div class="emoji">🤝</div>
+                        <h3 data-text="otun-audience-teams">小型团队</h3>
+                        <p data-text="otun-audience-teams-desc">需要独立私有网络的小型团队或社群。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="download" class="product-download">
+            <div class="container">
+                <h2 class="section-title" data-text="otun-download-title">下载与开始使用</h2>
+                <p data-text="otun-download-desc">在首选应用商店下载 OTun-M，并配合 OBox MyCloud 服务器 10 分钟内完成自建部署。</p>
+                <div class="download-buttons">
+                    <a href="#" class="store-button" data-text="otun-download-app-store">App Store 下载 OTun-M</a>
+                    <a href="#" class="store-button" data-text="otun-download-google">Google Play 下载 OTun-M</a>
+                    <a href="download/OTun-M/OTun-1.12.13-universal.apk" class="store-button" data-text="otun-download-apk">直接下载 APK</a>
+                </div>
+                <p style="margin-top: 30px;" data-text="otun-download-note">
+                    配对过程中遇到问题？请邮件联系 <a href="mailto:service@situstechnologies.com" style="color:#ffd700;">service@situstechnologies.com</a>，我们将协助完成部署。
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="config/company.js"></script>
+    <script src="config/languages/zh-CN.js"></script>
+    <script src="config/languages/en-US.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
